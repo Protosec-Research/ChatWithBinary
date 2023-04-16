@@ -4,103 +4,89 @@
 <img width="1000" alt="Xnip2023-04-16_11-36-38" src="https://user-images.githubusercontent.com/72267897/232265065-cf63b1d8-37ea-4eaa-b64e-e434eb369c16.png">
 
 
-
-
-`RET2GPT` is a cutting-edge software tool designed to analyze binary files using the **LangChain** (OpenAI API) technology. It primarily focuses on aiding CTF (Capture The Flag) Pwners in gaining a deeper understanding of the binary files they are working with and providing valuable assistance to help them solve challenges more effectively :)
+*由于我用的是英文写的README，所以如果有翻译不好的请大家谅解 :(*
+`RET2GPT` 是一款采用 LangChain（OpenAI API）技术分析二进制文件的尖端软件工具。它主要专注于帮助 CTF（Capture The Flag）Pwners 深入了解他们正在处理的二进制文件，并为他们提供有价值的帮助，以便更有效地解决挑战 :)
 
 [中文文档 README 📖](README.zh_CN.md)
 [English README 📖](README.md)
 
-`RET2GPT`  is built upon a strong foundation of artificial intelligence and machine learning, which enables it to analyze complex binary files quickly and efficiently. By leveraging the power of `OpenAI API`, RET2GPT can offer a comprehensive and detailed analysis of binary files, making it an indispensable tool for CTF Pwners.
+`RET2GPT` 建立在人工智能和机器学习的坚实基础之上，使其能够快速有效地分析复杂的二进制文件。通过利用 OpenAI API `的能力，RET2GPT` 可以为二进制文件提供全面而详细的分析，使其成为 CTF Pwners 不可或缺的工具。
 
-The primary goal of `RET2GPT` is to streamline the process of understanding binary files, thereby allowing CTF Pwners to focus on solving challenges rather than getting bogged down in the intricacies of binary analysis. The software achieves this by providing users with a thorough examination of the binary file's structure, logic, and potential vulnerabilities. This analysis assists Pwners in identifying any weak points in the code that may be exploitable by attackers.
+`RET2GPT` 的主要目标是简化理解二进制文件的过程，从而使 CTF Pwners 能够专注于解决挑战，而不是陷入二进制分析的复杂性中。软件通过为用户提供二进制文件结构、逻辑和潜在漏洞的详细检查来实现这一目标。这种分析有助于 Pwners 识别代码中可能被攻击者利用的任何薄弱点。
 
-All in all, `RetwGPT` includes those feature:
-* **Easy-to-use** : No need to input any other files, **only the binary file** and you are good to go 
-* **Langchains**: Use `langchain` to split the file, save you tons of tokenizing time and lots of money 
-* **Precise Analyze** : Analyze binary file using langchain & OpenAI API, use elebrately designed prompt by me to get the best result
-* **Automatic** : Use `langchain` and `OpenAI API` to automate analysis of binaries without human intervention
+`总之，Ret2GPT` 包括以下功能：
 
+* **易于使用**：无需输入任何其他文件，仅需二进制文件 即可开始使用
+* **Langchains**：使用 `langchain`的技术 来拆分文件，节省大量的标记化时间和钱
+* **精确分析**：使用 `langchain` 和 `OpenAI` API 分析二进制文件，使用我精心设计的提示以获得最佳结果
+* **自动化**：使用 `langchain` 和 `OpenAI` API 自动化分析二进制文件，无需人工干预
 
-
-# Installation
-Currently, we have not uploaded our package to PyPI, so you need to install it manually, from our github repo :(
-First, clone our repo:
+# 安装
+目前，我们尚未将我们的软件包上传到 PyPI，因此您需要从我们的 github 仓库手动安装 :(
+首先，克隆我们的仓库：
 ```
 git clone https://github.com/DDizzzy79/Ret2GPT.git
 ```
+现在，如果你只想尝试 Ret2GPT，你可以用 python3 运行它：
 
-Now, if you only want to try `Ret2GPT`, you can simply run it by using `python3`: 
 ```
 python3 ret2gpt
 ```
-However, if  you want tot use `Ret2GPT` permanently, you can easily install it by executing the `install.sh` file:
+然而，如果你想永久使用 Ret2GPT，你可以通过执行 install.sh 文件轻松安装它! 你可以通过以下方式运行它：
 ```
 ./install.sh
-```
-After that, you can use `ret2gpt` command to run our software from anywhere, what a magic is that?
+```     
+之后，您可以使用 ret2gpt 命令从任何地方运行我们的软件，这是多么神奇？
 
-# Usage
-
-First, the usage of this file in commandline is:
+# 使用方法
+在命令行中使用此文件的方法是：
 ```
 Usage: ret2gpt [FILE_PATH]
 ```
-
-Now, you entered the commandline interface, You can ask **ANYQUESTION YOU WANT**
-
-for example, if want to find of the program is vulnerable to buffer overflow, you can ask:
+现在，你进入了命令行界面，你可以**问你想问的任何问题**
+例如，如果想知道该程序是否容易受到栈溢出的攻击，你可以询问：
 ```
  What do you want to ask about example2/hacknote.c >>> Are there any buffer overflow based on the program?
 
-🏂 PwnGPT: 100% YES, there are several potential buffer overflow vulnerabilities in this code. 
- The add_note() function uses the read() function to read user input into a buffer without specifying a maximum buffer size, 
- which could allow an attacker to overflow the buffer and overwrite adjacent memory locations.
- Additionally, the print_note() and del_note() functions also read user input without proper boundary checks, which could result in buffer overflows. 
- To fix these issues, implement proper input validation and boundary checks before reading user input, and use functions like fgets() or scanf() that allow specifying a maximum buffer size.
+    🏂 PwnGPT: 100% 是的，这段代码中存在几个潜在的缓冲区溢出漏洞。
+    add_note() 函数使用 read() 函数读取用户输入到缓冲区，但没有指定最大缓冲区大小，这可能允许攻击者溢出缓冲区并覆盖相邻的内存位置。
+    此外，print_note() 和 del_note() 函数也在没有适当边界检查的情况下读取用户输入，可能导致缓冲区溢出。
+    要解决这些问题，在读取用户输入之前实施适当的输入验证和边界检查，并使用允许指定最大缓冲区大小的函数，如 fgets() 或 scanf()。
 ```
 
-you can use `help` command to get the help message:
+你可以使用 help 命令来获取帮助信息：
 ```
 What do you want to ask about example2/hacknote.c >>> /help
 
+    /analysis - 从 Pwn 角度分析代码的提示
+    /exp - 获取可以用于此文件的 "Pwntools" 的 exp 模板
+    /exit - 退出程序
 
-    /analysis - Get the prompt for analysis the code from a Pwn perspective
-    /exp - Get the exp template that can be used by "Pwntools" for this file
-    /exit - Exit the program
-
-
- What do you want to ask about example2/hacknote.c >>>
+What do you want to ask about example2/hacknote.c >>>
  ```
-I am sure you will figure out yourself what does two commands means
 
-
-<!-- The commands in the program are super easy, I am sure you will figure out yourself, but if you still have any questions, you can always ask me by opening an issue on our github repo. -->
-
-<!-- <img width="800" alt="Xnip2023-04-16_11-04-30" src="https://user-images.githubusercontent.com/72267897/232264043-5f3a2c02-8068-42c5-aae1-dd858c4abfcb.png"> -->
-
-# How does Ret2GPT works?
-
-to find the answer of this question, we must analysis every directory and step of the program, so let's start!
+# Ret2GPT 是如何工作的？
+要回答这个问题，我们必须分析程序的每个目录和步骤，所以让我们开始吧！
 
 ## `langchain_proprocess/`
+对于这部分代码，我设计了一系列函数和实用工具，利用 LangChain（OpenAI API）技术的能力，创建了一个先进的问答系统。这个系统专门用于处理和分析文本文件，主要目的是帮助 Capture the Flag（CTF）Pwners 更有效地理解二进制文件并解决挑战。
 
-For this part of  code, I have designed a series of functions and utilities that leverage the power of the LangChain (OpenAI API) technology to create an advanced question-answering system. This system is specifically tailored for processing and analyzing text files, with the primary goal of assisting Capture the Flag (CTF) Pwners in understanding binary files and solving challenges more effectively.
+我开始导入必要的模块并使用 GPT-3.5 Turbo 模型初始化 ChatOpenAI 模型。接下来，我定义了几个实用程序函数，用于处理文本分析管道中的各种任务：
 
-I started by importing the necessary modules and initializing the ChatOpenAI model with the GPT-3.5 Turbo model. Next, I defined several utility functions that handle various tasks in the text analysis pipeline:
+## `loading`:
+此函数以文本文件描述作为输入，并使用 TextLoader 实用程序将文件加载到内存中。
 
-### `loading`: 
-This function takes a text file description as input and utilizes the TextLoader utility to load the file into memory.
-### `split_files`:
- Once the file is loaded, this function employs the CharacterTextSplitter utility to break the document into smaller chunks, making it easier to process.
+## `split_files`:
+文件加载后，此函数使用 CharacterTextSplitter 实用程序将文档拆分成较小的块，使其更易于处理。
  ```python
  def split_files(loader):
     document = loader.load()
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     return text_splitter.split_documents(document)
  ```
-### `create_qa`: 
-This function creates a question-answering system by combining the text chunks with the OpenAIEmbeddings and Chroma vector store, allowing efficient retrieval of relevant information.
+
+## `create_qa`:
+此函数通过将文本块与 OpenAIEmbeddings 和 Chroma 向量存储库相结合，创建一个问题回答系统
 ```python
 def create_qa(loader):
     from langchain.embeddings import OpenAIEmbeddings
@@ -111,16 +97,16 @@ def create_qa(loader):
     retriever = db.as_retriever()
     return RetrievalQA.from_chain_type(llm=model, chain_type="stuff", retriever=retriever)
 ```
-Also, I use GPT3.5 for `QA bot`
+## `qa_with_docs`:
+此函数运行问题回答链，接受查询和文档加载器作为输入以生成有意义的响应。
 
-### `qa_with_docs`: 
-This function runs the question-answering chain, taking a query and document loader as input to generate meaningful responses.
-### `query_about_files`: 
-This function facilitates querying the question-answering system by providing a user-defined query.
-### `summerize_chain`: 
-This function is responsible for summarizing the text file using the summarization chain, generating a concise summary of the file's content.
+## `query_about_files`:
+此函数通过提供用户定义的查询来促进查询问题回答系统。
 
-To ensure the question-answering system is context-aware and can provide accurate and relevant information, I built a detailed prompt using the `build_prompt_for_qa()`. This function employs a few-shot learning approach with the FewShotPromptTemplate class, incorporating several examples of code analysis and vulnerability identification. These examples serve as a guide for the model, helping it understand the context and respond accordingly.
+## `summerize_chain`:
+此函数负责使用摘要链对文本文件进行摘要，生成文件内容的简洁摘要。
+## `build_prompt_for_qa()`:
+为确保问题回答系统具有上下文感知能力并能提供准确和相关的信息，我使用 `build_prompt_for_qa()` 构建了一个详细的提示。此函数使用 `FewShotPromptTemplate` 类的少量示例学习方法，包括几个代码分析和漏洞识别的示例。这些示例作为模型的指导，帮助它理解上下文并作出相应的回应。
 
 ```python
 def build_prompt_for_qa(query):
@@ -190,10 +176,12 @@ def build_prompt_for_qa(query):
     )
     return few_shot_prompt_template.format(query=query)
 ```
+# `built_in_command/`
+我认为Ret2gpt中的这一部分不需要太多解释，它只是一个命令行界面，允许用户与系统交互。`built_in_command`文件夹包含以下文件：
 
-
-## `built_in_command/`
-I think this part of `Ret2gpt` do not require that much of explaination, it is just a command line interface that allows users to interact with the system. The `built_in_command` folder contains the following files:
-  * `__init__.py`: This file is responsible for initializing the `built_in_command` folder as a python package.
-  * `check_for_command.py`: This file contains the `check()` and `help()` function, `check()` checks if the user input is a command, and return different prompt with the command, and `help()` prints the help message.
-  * `command_line.py`: This file contains the `command_line()` function, which is the main function of the `built_in_command` folder. It is responsible for parsing the user input and calling the corresponding function. 
+## `__init__.py`：
+此文件负责将built_in_command文件夹初始化为Python包。
+## `check_for_command.py`：
+该文件包含check()和help()函数，check()函数检查用户输入是否为命令，并返回不同的提示与命令，help()函数打印帮助信息。
+## `command_line.py`：
+该文件包含command_line()函数，它是built_in_command文件夹的主要函数。它负责解析用户输入并调用相应的函数。
