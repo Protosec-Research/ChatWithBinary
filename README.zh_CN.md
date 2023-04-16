@@ -40,7 +40,11 @@ python3 ret2gpt
 之后，您可以使用 ret2gpt 命令从任何地方运行我们的软件，这是多么神奇？
 
 # 使用方法
-在命令行中使用此文件的方法是：
+开始之前你需要设定你的 `OPENAI_KEY` , 你可以在 [这里](https://beta.openai.com/docs/developer-quickstart) 获取到你的`key` 
+```
+export OPENAI_API_KEY= [YOUR_OPENAI_KEY]
+```
+之后，在命令行中使用此文件的方法是：
 ```
 Usage: ret2gpt [FILE_PATH]
 ```
