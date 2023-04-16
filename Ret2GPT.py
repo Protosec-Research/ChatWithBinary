@@ -1,3 +1,4 @@
+#!/opt/homebrew/bin/python3
 from langchain_preprocess import prompt_builder as pwnchain
 from langchain.embeddings import OpenAIEmbeddings
 from built_in_command import command_line
