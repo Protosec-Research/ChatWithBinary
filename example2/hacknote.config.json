@@ -1,0 +1,5105 @@
+{
+    "date": "2023-04-15",
+    "time": "21:22:24",
+    "decompParams": {
+        "verboseOut": true,
+        "keepAllFuncs": false,
+        "selectedDecodeOnly": false,
+        "ordinalNumDirectory": "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/ordinals/",
+        "inputFile": "hacknote",
+        "outputFile": "hacknote.c",
+        "outputBitcodeFile": "hacknote.bc",
+        "outputAsmFile": "hacknote.dsm",
+        "outputLlFile": "hacknote.ll",
+        "outputConfigFile": "hacknote.config.json",
+        "outputUnpackedFile": "hacknote-unpacked",
+        "outputFormat": "plain",
+        "backendCallInfoObtainer": "optim",
+        "backendVarRenamer": "readable",
+        "backendNoOpts": false,
+        "backendEmitCfg": false,
+        "backendEmitCg": false,
+        "detectStaticCode": true,
+        "backendKeepAllBrackets": false,
+        "backendKeepLibraryFuncs": false,
+        "backendNoTimeVaryingInfo": false,
+        "backendNoVarRenaming": false,
+        "backendNoCompoundOperators": false,
+        "backendNoSymbolicNames": false,
+        "timeout": 0,
+        "maxMemoryLimit": 0,
+        "maxMemoryLimitHalfRam": true,
+        "staticSignPaths": [
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/yara_patterns/static-code/"
+        ],
+        "libraryTypeInfoPaths": [
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/types/arm.json",
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/types/cstdlib.json",
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/types/linux.json",
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/types/windows.json",
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/types/windrivers.json"
+        ],
+        "cryptoPatternPaths": [
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/yara_patterns/signsrch/signsrch.yarac",
+            "/opt/homebrew/Cellar/retdec/5.0/share/retdec/./support/generic/yara_patterns/signsrch/signsrch_regex.yarac"
+        ],
+        "llvmPasses": [
+            "retdec-provider-init",
+            "retdec-decoder",
+            "verify",
+            "retdec-x86-addr-spaces",
+            "retdec-x87-fpu",
+            "retdec-main-detection",
+            "retdec-idioms-libgcc",
+            "retdec-inst-opt",
+            "retdec-cond-branch-opt",
+            "retdec-syscalls",
+            "retdec-stack",
+            "retdec-constants",
+            "retdec-param-return",
+            "retdec-inst-opt-rda",
+            "retdec-inst-opt",
+            "retdec-simple-types",
+            "retdec-write-dsm",
+            "retdec-remove-asm-instrs",
+            "retdec-class-hierarchy",
+            "retdec-select-fncs",
+            "retdec-unreachable-funcs",
+            "retdec-inst-opt",
+            "retdec-register-localization",
+            "retdec-value-protect",
+            "instcombine",
+            "tbaa",
+            "basicaa",
+            "simplifycfg",
+            "early-cse",
+            "tbaa",
+            "basicaa",
+            "globalopt",
+            "mem2reg",
+            "instcombine",
+            "simplifycfg",
+            "early-cse",
+            "lazy-value-info",
+            "jump-threading",
+            "correlated-propagation",
+            "simplifycfg",
+            "instcombine",
+            "simplifycfg",
+            "reassociate",
+            "loops",
+            "loop-simplify",
+            "lcssa",
+            "loop-rotate",
+            "licm",
+            "lcssa",
+            "instcombine",
+            "loop-simplifycfg",
+            "loop-simplify",
+            "aa",
+            "loop-accesses",
+            "loop-load-elim",
+            "lcssa",
+            "indvars",
+            "loop-idiom",
+            "loop-deletion",
+            "gvn",
+            "sccp",
+            "instcombine",
+            "lazy-value-info",
+            "jump-threading",
+            "correlated-propagation",
+            "dse",
+            "bdce",
+            "adce",
+            "simplifycfg",
+            "instcombine",
+            "strip-dead-prototypes",
+            "globaldce",
+            "constmerge",
+            "constprop",
+            "instcombine",
+            "instcombine",
+            "tbaa",
+            "basicaa",
+            "simplifycfg",
+            "early-cse",
+            "tbaa",
+            "basicaa",
+            "globalopt",
+            "mem2reg",
+            "instcombine",
+            "simplifycfg",
+            "early-cse",
+            "lazy-value-info",
+            "jump-threading",
+            "correlated-propagation",
+            "simplifycfg",
+            "instcombine",
+            "simplifycfg",
+            "reassociate",
+            "loops",
+            "loop-simplify",
+            "lcssa",
+            "loop-rotate",
+            "licm",
+            "lcssa",
+            "instcombine",
+            "loop-simplifycfg",
+            "loop-simplify",
+            "aa",
+            "loop-accesses",
+            "loop-load-elim",
+            "lcssa",
+            "indvars",
+            "loop-idiom",
+            "loop-deletion",
+            "gvn",
+            "sccp",
+            "instcombine",
+            "lazy-value-info",
+            "jump-threading",
+            "correlated-propagation",
+            "dse",
+            "bdce",
+            "adce",
+            "simplifycfg",
+            "instcombine",
+            "strip-dead-prototypes",
+            "globaldce",
+            "constmerge",
+            "constprop",
+            "instcombine",
+            "retdec-inst-opt",
+            "retdec-simple-types",
+            "retdec-stack-ptr-op-remove",
+            "retdec-idioms",
+            "instcombine",
+            "retdec-inst-opt",
+            "retdec-idioms",
+            "retdec-remove-phi",
+            "sink",
+            "verify",
+            "loops",
+            "scalar-evolution",
+            "retdec-value-protect",
+            "retdec-write-ll",
+            "retdec-write-bc",
+            "retdec-llvmir2hll"
+        ],
+        "entryPoint": "0x8048560",
+        "mainAddress": "0x8048a38",
+        "sectionVMA": ""
+    },
+    "architecture": {
+        "name": "x86",
+        "bitSize": 32,
+        "endian": "little"
+    },
+    "fileType": "executable",
+    "fileFormat": "elf32",
+    "tools": [
+        {
+            "type": "compiler",
+            "name": "gcc",
+            "percentage": 0.0,
+            "identicalSignificantNibbles": 0,
+            "totalSignificantNibbles": 0,
+            "heuristics": true,
+            "version": "5.4.0"
+        },
+        {
+            "type": "compiler",
+            "name": "gcc",
+            "percentage": 95.91836734693877,
+            "identicalSignificantNibbles": 47,
+            "totalSignificantNibbles": 49,
+            "heuristics": false,
+            "version": "4.6.3",
+            "additional": "RHEL"
+        }
+    ],
+    "functions": [
+        {
+            "name": "__do_global_dtors_aux",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048610",
+            "endAddr": "0x804862e",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "__gmon_start__",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void __gmon_start__(void);",
+            "startAddr": "0x8049ffc",
+            "endAddr": "0x8049ffd",
+            "returnType": {
+                "llvmIr": "i32"
+            }
+        },
+        {
+            "name": "__libc_csu_fini",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048b60",
+            "endAddr": "0x8048b62",
+            "returnType": {
+                "llvmIr": "i32"
+            }
+        },
+        {
+            "name": "__libc_csu_init",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048b00",
+            "endAddr": "0x8048b5d",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-16",
+                    "realName": "stack_var_-16",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -16
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-8",
+                    "realName": "stack_var_-8",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -8
+                    }
+                },
+                {
+                    "name": "stack_var_4",
+                    "realName": "stack_var_4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 4
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "arg1",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "__libc_start_main",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int __libc_start_main(int *(main)(int, char **, char **), int argc, char ** ubp_av, void(* init)(void), void(* fini)(void), void(* rtld_fini)(void), void(* stack_end));",
+            "startAddr": "0x804a030",
+            "endAddr": "0x804a031",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "main",
+                    "realName": "main",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "argc",
+                    "realName": "argc",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "ubp_av",
+                    "realName": "ubp_av",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8**"
+                    }
+                },
+                {
+                    "name": "init",
+                    "realName": "init",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                },
+                {
+                    "name": "fini",
+                    "realName": "fini",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                },
+                {
+                    "name": "rtld_fini",
+                    "realName": "rtld_fini",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "__stack_chk_fail",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void __stack_chk_fail(void);",
+            "startAddr": "0x804a01c",
+            "endAddr": "0x804a01d",
+            "returnType": {
+                "llvmIr": "i32"
+            }
+        },
+        {
+            "name": "__x86.get_pc_thunk.bx",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048590",
+            "endAddr": "0x8048594",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "arg1",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "_exit",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void _exit(int status);",
+            "startAddr": "0x804a014",
+            "endAddr": "0x804a015",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "status",
+                    "realName": "status",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "_fini",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048b64",
+            "endAddr": "0x8048b78",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "_init",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048458",
+            "endAddr": "0x804847b",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "_start",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048560",
+            "endAddr": "0x8048582",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-16",
+                    "realName": "stack_var_-16",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -16
+                    }
+                },
+                {
+                    "name": "stack_var_-20",
+                    "realName": "stack_var_-20",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -20
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-32",
+                    "realName": "stack_var_-32",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -32
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-8",
+                    "realName": "stack_var_-8",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -8
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                },
+                {
+                    "name": "stack_var_4",
+                    "realName": "stack_var_4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 4
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "arg1",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "add_note",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048676",
+            "endAddr": "0x8048804",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-16",
+                    "realName": "stack_var_-16",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -16
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-32",
+                    "realName": "stack_var_-32",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -32
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-44",
+                    "realName": "stack_var_-44",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -44
+                    }
+                },
+                {
+                    "name": "stack_var_-48",
+                    "realName": "stack_var_-48",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -48
+                    }
+                },
+                {
+                    "name": "stack_var_-52",
+                    "realName": "stack_var_-52",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -52
+                    }
+                },
+                {
+                    "name": "stack_var_-56",
+                    "realName": "stack_var_-56",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -56
+                    }
+                },
+                {
+                    "name": "stack_var_-60",
+                    "realName": "stack_var_-60",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -60
+                    }
+                },
+                {
+                    "name": "stack_var_-8",
+                    "realName": "stack_var_-8",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -8
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "atoi",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int atoi(const char * nptr);",
+            "startAddr": "0x804a038",
+            "endAddr": "0x804a039",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "nptr",
+                    "realName": "nptr",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "del_note",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048804",
+            "endAddr": "0x80488d5",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-16",
+                    "realName": "stack_var_-16",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -16
+                    }
+                },
+                {
+                    "name": "stack_var_-20",
+                    "realName": "stack_var_-20",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -20
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-32",
+                    "realName": "stack_var_-32",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -32
+                    }
+                },
+                {
+                    "name": "stack_var_-36",
+                    "realName": "stack_var_-36",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -36
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-40",
+                    "realName": "stack_var_-40",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -40
+                    }
+                },
+                {
+                    "name": "stack_var_-44",
+                    "realName": "stack_var_-44",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -44
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "deregister_tm_clones",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80485a0",
+            "endAddr": "0x80485cb",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "exit",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void exit(int status);",
+            "startAddr": "0x804a02c",
+            "endAddr": "0x804a02d",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "status",
+                    "realName": "status",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "frame_dummy",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048630",
+            "endAddr": "0x804865b",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "free",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void free(void * ptr);",
+            "startAddr": "0x804a018",
+            "endAddr": "0x804a019",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "ptr",
+                    "realName": "ptr",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048490",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048490",
+            "endAddr": "0x8048496",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "fd",
+                    "realName": "fd",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "buf",
+                    "realName": "buf",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32*"
+                    }
+                },
+                {
+                    "name": "nbytes",
+                    "realName": "nbytes",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_80484a0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484a0",
+            "endAddr": "0x80484a6",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "format",
+                    "realName": "format",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_80484b0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484b0",
+            "endAddr": "0x80484b6",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "status",
+                    "realName": "status",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_80484c0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484c0",
+            "endAddr": "0x80484c6",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "ptr",
+                    "realName": "ptr",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_80484d0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484d0",
+            "endAddr": "0x80484d6",
+            "returnType": {
+                "llvmIr": "i32"
+            }
+        },
+        {
+            "name": "function_80484e0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484e0",
+            "endAddr": "0x80484e6",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "size",
+                    "realName": "size",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_80484f0",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80484f0",
+            "endAddr": "0x80484f6",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "s",
+                    "realName": "s",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048500",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048500",
+            "endAddr": "0x8048506",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "command",
+                    "realName": "command",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048510",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048510",
+            "endAddr": "0x8048516",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "status",
+                    "realName": "status",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048520",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048520",
+            "endAddr": "0x8048526",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "main",
+                    "realName": "main",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "argc",
+                    "realName": "argc",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "ubp_av",
+                    "realName": "ubp_av",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8**"
+                    }
+                },
+                {
+                    "name": "init",
+                    "realName": "init",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                },
+                {
+                    "name": "fini",
+                    "realName": "fini",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                },
+                {
+                    "name": "rtld_fini",
+                    "realName": "rtld_fini",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "void ()*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048530",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048530",
+            "endAddr": "0x8048536",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "stream",
+                    "realName": "stream",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "%_IO_FILE*"
+                    }
+                },
+                {
+                    "name": "buf",
+                    "realName": "buf",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                },
+                {
+                    "name": "modes",
+                    "realName": "modes",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "n",
+                    "realName": "n",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048540",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048540",
+            "endAddr": "0x8048546",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "nptr",
+                    "realName": "nptr",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "function_8048550",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048550",
+            "endAddr": "0x8048556",
+            "returnType": {
+                "llvmIr": "i32"
+            }
+        },
+        {
+            "name": "magic",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048986",
+            "endAddr": "0x804899f",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "main",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x8048a38",
+            "endAddr": "0x8048af2",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-20",
+                    "realName": "stack_var_-20",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -20
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-32",
+                    "realName": "stack_var_-32",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -32
+                    }
+                },
+                {
+                    "name": "stack_var_-36",
+                    "realName": "stack_var_-36",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -36
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-40",
+                    "realName": "stack_var_-40",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -40
+                    }
+                },
+                {
+                    "name": "stack_var_-44",
+                    "realName": "stack_var_-44",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -44
+                    }
+                },
+                {
+                    "name": "stack_var_-48",
+                    "realName": "stack_var_-48",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -48
+                    }
+                },
+                {
+                    "name": "stack_var_-8",
+                    "realName": "stack_var_-8",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -8
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                },
+                {
+                    "name": "stack_var_4",
+                    "realName": "stack_var_4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 4
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "argc",
+                    "realName": "argc",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "argv",
+                    "realName": "argv",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8**"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "malloc",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "void * malloc(size_t size);",
+            "startAddr": "0x804a020",
+            "endAddr": "0x804a021",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "size",
+                    "realName": "size",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "menu",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x804899f",
+            "endAddr": "0x8048a38",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "print_note",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80488d5",
+            "endAddr": "0x8048986",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-16",
+                    "realName": "stack_var_-16",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -16
+                    }
+                },
+                {
+                    "name": "stack_var_-20",
+                    "realName": "stack_var_-20",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -20
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-32",
+                    "realName": "stack_var_-32",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -32
+                    }
+                },
+                {
+                    "name": "stack_var_-36",
+                    "realName": "stack_var_-36",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -36
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_-40",
+                    "realName": "stack_var_-40",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -40
+                    }
+                },
+                {
+                    "name": "stack_var_-44",
+                    "realName": "stack_var_-44",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -44
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "print_note_content",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x804865b",
+            "endAddr": "0x8048676",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                },
+                {
+                    "name": "stack_var_4",
+                    "realName": "stack_var_4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 4
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "arg1",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "printf",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int printf(const char * restrict format, ...);",
+            "startAddr": "0x804a010",
+            "endAddr": "0x804a011",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "format",
+                    "realName": "format",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "puts",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int puts(const char * s);",
+            "startAddr": "0x804a024",
+            "endAddr": "0x804a025",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "s",
+                    "realName": "s",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "read",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "ssize_t read(int fd, void * buf, size_t nbytes);",
+            "startAddr": "0x804a00c",
+            "endAddr": "0x804a00d",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "fd",
+                    "realName": "fd",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "buf",
+                    "realName": "buf",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32*"
+                    }
+                },
+                {
+                    "name": "nbytes",
+                    "realName": "nbytes",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "register_tm_clones",
+            "callingConvention": "cdecl",
+            "fncType": "decompilerDefined",
+            "startAddr": "0x80485d0",
+            "endAddr": "0x8048605",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "locals": [
+                {
+                    "name": "stack_var_-12",
+                    "realName": "stack_var_-12",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -12
+                    }
+                },
+                {
+                    "name": "stack_var_-20",
+                    "realName": "stack_var_-20",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -20
+                    }
+                },
+                {
+                    "name": "stack_var_-24",
+                    "realName": "stack_var_-24",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -24
+                    }
+                },
+                {
+                    "name": "stack_var_-28",
+                    "realName": "stack_var_-28",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -28
+                    }
+                },
+                {
+                    "name": "stack_var_-4",
+                    "realName": "stack_var_-4",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": -4
+                    }
+                },
+                {
+                    "name": "stack_var_0",
+                    "realName": "stack_var_0",
+                    "type": {
+                        "llvmIr": "i32*"
+                    },
+                    "storage": {
+                        "type": "stack",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "setvbuf",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int setvbuf(FILE * restrict stream, char * restrict buf, int modes, size_t n);",
+            "startAddr": "0x804a034",
+            "endAddr": "0x804a035",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "stream",
+                    "realName": "stream",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "%_IO_FILE*"
+                    }
+                },
+                {
+                    "name": "buf",
+                    "realName": "buf",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                },
+                {
+                    "name": "modes",
+                    "realName": "modes",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                },
+                {
+                    "name": "n",
+                    "realName": "n",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i32"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "system",
+            "callingConvention": "cdecl",
+            "fncType": "dynamicallyLinked",
+            "declarationStr": "int system(const char * command);",
+            "startAddr": "0x804a028",
+            "endAddr": "0x804a029",
+            "returnType": {
+                "llvmIr": "i32"
+            },
+            "parameters": [
+                {
+                    "name": "command",
+                    "realName": "command",
+                    "isFromDebug": true,
+                    "type": {
+                        "llvmIr": "i8*"
+                    }
+                }
+            ]
+        }
+    ],
+    "globals": [
+        {
+            "name": "global_var_8048b80",
+            "type": {
+                "llvmIr": "[5 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048b80"
+            }
+        },
+        {
+            "name": "global_var_8048b85",
+            "type": {
+                "llvmIr": "[13 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048b85"
+            }
+        },
+        {
+            "name": "global_var_8048b92",
+            "type": {
+                "llvmIr": "[12 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048b92"
+            }
+        },
+        {
+            "name": "global_var_8048b9e",
+            "type": {
+                "llvmIr": "[10 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048b9e"
+            }
+        },
+        {
+            "name": "global_var_8048ba8",
+            "type": {
+                "llvmIr": "[10 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048ba8"
+            }
+        },
+        {
+            "name": "global_var_8048bb2",
+            "type": {
+                "llvmIr": "[8 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bb2"
+            }
+        },
+        {
+            "name": "global_var_8048bba",
+            "type": {
+                "llvmIr": "[14 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bba"
+            }
+        },
+        {
+            "name": "global_var_8048bc8",
+            "type": {
+                "llvmIr": "[8 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bc8"
+            }
+        },
+        {
+            "name": "global_var_8048bd0",
+            "type": {
+                "llvmIr": "[9 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bd0"
+            }
+        },
+        {
+            "name": "global_var_8048bd9",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bd9"
+            }
+        },
+        {
+            "name": "global_var_8048bf0",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048bf0"
+            }
+        },
+        {
+            "name": "global_var_8048c07",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c07"
+            }
+        },
+        {
+            "name": "global_var_8048c1e",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c1e"
+            }
+        },
+        {
+            "name": "global_var_8048c35",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c35"
+            }
+        },
+        {
+            "name": "global_var_8048c4c",
+            "type": {
+                "llvmIr": "[23 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c4c"
+            }
+        },
+        {
+            "name": "global_var_8048c63",
+            "type": {
+                "llvmIr": "[14 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c63"
+            }
+        },
+        {
+            "name": "global_var_8048c71",
+            "type": {
+                "llvmIr": "[15 x i8]"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8048c71"
+            }
+        },
+        {
+            "name": "global_var_8049f10",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x8049f10"
+            }
+        },
+        {
+            "name": "global_var_804a060",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x804a060"
+            }
+        },
+        {
+            "name": "global_var_804a064",
+            "type": {
+                "llvmIr": "%_IO_FILE*"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x804a064"
+            }
+        },
+        {
+            "name": "global_var_804a068",
+            "type": {
+                "llvmIr": "i8"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x804a068"
+            }
+        },
+        {
+            "name": "global_var_804a06c",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x804a06c"
+            }
+        },
+        {
+            "name": "global_var_804a070",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "global",
+                "value": "0x804a070"
+            }
+        }
+    ],
+    "registers": [
+        {
+            "name": "ac",
+            "realName": "ac",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ac",
+                "registerNumber": 260
+            }
+        },
+        {
+            "name": "az",
+            "realName": "az",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "az",
+                "registerNumber": 249
+            }
+        },
+        {
+            "name": "cf",
+            "realName": "cf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cf",
+                "registerNumber": 247
+            }
+        },
+        {
+            "name": "cr0",
+            "realName": "cr0",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr0",
+                "registerNumber": 50
+            }
+        },
+        {
+            "name": "cr1",
+            "realName": "cr1",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr1",
+                "registerNumber": 51
+            }
+        },
+        {
+            "name": "cr10",
+            "realName": "cr10",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr10",
+                "registerNumber": 60
+            }
+        },
+        {
+            "name": "cr11",
+            "realName": "cr11",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr11",
+                "registerNumber": 61
+            }
+        },
+        {
+            "name": "cr12",
+            "realName": "cr12",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr12",
+                "registerNumber": 62
+            }
+        },
+        {
+            "name": "cr13",
+            "realName": "cr13",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr13",
+                "registerNumber": 63
+            }
+        },
+        {
+            "name": "cr14",
+            "realName": "cr14",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr14",
+                "registerNumber": 64
+            }
+        },
+        {
+            "name": "cr15",
+            "realName": "cr15",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr15",
+                "registerNumber": 65
+            }
+        },
+        {
+            "name": "cr2",
+            "realName": "cr2",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr2",
+                "registerNumber": 52
+            }
+        },
+        {
+            "name": "cr3",
+            "realName": "cr3",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr3",
+                "registerNumber": 53
+            }
+        },
+        {
+            "name": "cr4",
+            "realName": "cr4",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr4",
+                "registerNumber": 54
+            }
+        },
+        {
+            "name": "cr5",
+            "realName": "cr5",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr5",
+                "registerNumber": 55
+            }
+        },
+        {
+            "name": "cr6",
+            "realName": "cr6",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr6",
+                "registerNumber": 56
+            }
+        },
+        {
+            "name": "cr7",
+            "realName": "cr7",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr7",
+                "registerNumber": 57
+            }
+        },
+        {
+            "name": "cr8",
+            "realName": "cr8",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr8",
+                "registerNumber": 58
+            }
+        },
+        {
+            "name": "cr9",
+            "realName": "cr9",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cr9",
+                "registerNumber": 59
+            }
+        },
+        {
+            "name": "cs",
+            "realName": "cs",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "cs",
+                "registerNumber": 11
+            }
+        },
+        {
+            "name": "df",
+            "realName": "df",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "df",
+                "registerNumber": 254
+            }
+        },
+        {
+            "name": "dr0",
+            "realName": "dr0",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr0",
+                "registerNumber": 66
+            }
+        },
+        {
+            "name": "dr1",
+            "realName": "dr1",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr1",
+                "registerNumber": 67
+            }
+        },
+        {
+            "name": "dr10",
+            "realName": "dr10",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr10",
+                "registerNumber": 76
+            }
+        },
+        {
+            "name": "dr11",
+            "realName": "dr11",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr11",
+                "registerNumber": 77
+            }
+        },
+        {
+            "name": "dr12",
+            "realName": "dr12",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr12",
+                "registerNumber": 78
+            }
+        },
+        {
+            "name": "dr13",
+            "realName": "dr13",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr13",
+                "registerNumber": 79
+            }
+        },
+        {
+            "name": "dr14",
+            "realName": "dr14",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr14",
+                "registerNumber": 80
+            }
+        },
+        {
+            "name": "dr15",
+            "realName": "dr15",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr15",
+                "registerNumber": 81
+            }
+        },
+        {
+            "name": "dr2",
+            "realName": "dr2",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr2",
+                "registerNumber": 68
+            }
+        },
+        {
+            "name": "dr3",
+            "realName": "dr3",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr3",
+                "registerNumber": 69
+            }
+        },
+        {
+            "name": "dr4",
+            "realName": "dr4",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr4",
+                "registerNumber": 70
+            }
+        },
+        {
+            "name": "dr5",
+            "realName": "dr5",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr5",
+                "registerNumber": 71
+            }
+        },
+        {
+            "name": "dr6",
+            "realName": "dr6",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr6",
+                "registerNumber": 72
+            }
+        },
+        {
+            "name": "dr7",
+            "realName": "dr7",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr7",
+                "registerNumber": 73
+            }
+        },
+        {
+            "name": "dr8",
+            "realName": "dr8",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr8",
+                "registerNumber": 74
+            }
+        },
+        {
+            "name": "dr9",
+            "realName": "dr9",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "dr9",
+                "registerNumber": 75
+            }
+        },
+        {
+            "name": "ds",
+            "realName": "ds",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ds",
+                "registerNumber": 17
+            }
+        },
+        {
+            "name": "eax",
+            "realName": "eax",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "eax",
+                "registerNumber": 19
+            }
+        },
+        {
+            "name": "ebp",
+            "realName": "ebp",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ebp",
+                "registerNumber": 20
+            }
+        },
+        {
+            "name": "ebx",
+            "realName": "ebx",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ebx",
+                "registerNumber": 21
+            }
+        },
+        {
+            "name": "ecx",
+            "realName": "ecx",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ecx",
+                "registerNumber": 22
+            }
+        },
+        {
+            "name": "edi",
+            "realName": "edi",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "edi",
+                "registerNumber": 23
+            }
+        },
+        {
+            "name": "edx",
+            "realName": "edx",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "edx",
+                "registerNumber": 24
+            }
+        },
+        {
+            "name": "eflags",
+            "realName": "eflags",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "eflags",
+                "registerNumber": 25
+            }
+        },
+        {
+            "name": "eip",
+            "realName": "eip",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "eip",
+                "registerNumber": 26
+            }
+        },
+        {
+            "name": "eiz",
+            "realName": "eiz",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "eiz",
+                "registerNumber": 27
+            }
+        },
+        {
+            "name": "es",
+            "realName": "es",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "es",
+                "registerNumber": 28
+            }
+        },
+        {
+            "name": "esi",
+            "realName": "esi",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "esi",
+                "registerNumber": 29
+            }
+        },
+        {
+            "name": "esp",
+            "realName": "esp",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "esp",
+                "registerNumber": 30
+            }
+        },
+        {
+            "name": "fp0",
+            "realName": "fp0",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp0",
+                "registerNumber": 82
+            }
+        },
+        {
+            "name": "fp1",
+            "realName": "fp1",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp1",
+                "registerNumber": 83
+            }
+        },
+        {
+            "name": "fp2",
+            "realName": "fp2",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp2",
+                "registerNumber": 84
+            }
+        },
+        {
+            "name": "fp3",
+            "realName": "fp3",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp3",
+                "registerNumber": 85
+            }
+        },
+        {
+            "name": "fp4",
+            "realName": "fp4",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp4",
+                "registerNumber": 86
+            }
+        },
+        {
+            "name": "fp5",
+            "realName": "fp5",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp5",
+                "registerNumber": 87
+            }
+        },
+        {
+            "name": "fp6",
+            "realName": "fp6",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp6",
+                "registerNumber": 88
+            }
+        },
+        {
+            "name": "fp7",
+            "realName": "fp7",
+            "type": {
+                "llvmIr": "double"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fp7",
+                "registerNumber": 89
+            }
+        },
+        {
+            "name": "fpsw",
+            "realName": "fpsw",
+            "type": {
+                "llvmIr": "i32"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpsw",
+                "registerNumber": 31
+            }
+        },
+        {
+            "name": "fpu_control_DM",
+            "realName": "fpu_control_DM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_DM",
+                "registerNumber": 279
+            }
+        },
+        {
+            "name": "fpu_control_IM",
+            "realName": "fpu_control_IM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_IM",
+                "registerNumber": 278
+            }
+        },
+        {
+            "name": "fpu_control_OM",
+            "realName": "fpu_control_OM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_OM",
+                "registerNumber": 281
+            }
+        },
+        {
+            "name": "fpu_control_PC",
+            "realName": "fpu_control_PC",
+            "type": {
+                "llvmIr": "i2"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_PC",
+                "registerNumber": 284
+            }
+        },
+        {
+            "name": "fpu_control_PM",
+            "realName": "fpu_control_PM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_PM",
+                "registerNumber": 283
+            }
+        },
+        {
+            "name": "fpu_control_RC",
+            "realName": "fpu_control_RC",
+            "type": {
+                "llvmIr": "i2"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_RC",
+                "registerNumber": 285
+            }
+        },
+        {
+            "name": "fpu_control_UM",
+            "realName": "fpu_control_UM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_UM",
+                "registerNumber": 282
+            }
+        },
+        {
+            "name": "fpu_control_X",
+            "realName": "fpu_control_X",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_X",
+                "registerNumber": 286
+            }
+        },
+        {
+            "name": "fpu_control_ZM",
+            "realName": "fpu_control_ZM",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_control_ZM",
+                "registerNumber": 280
+            }
+        },
+        {
+            "name": "fpu_stat_B",
+            "realName": "fpu_stat_B",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_B",
+                "registerNumber": 277
+            }
+        },
+        {
+            "name": "fpu_stat_C0",
+            "realName": "fpu_stat_C0",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_C0",
+                "registerNumber": 272
+            }
+        },
+        {
+            "name": "fpu_stat_C1",
+            "realName": "fpu_stat_C1",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_C1",
+                "registerNumber": 273
+            }
+        },
+        {
+            "name": "fpu_stat_C2",
+            "realName": "fpu_stat_C2",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_C2",
+                "registerNumber": 274
+            }
+        },
+        {
+            "name": "fpu_stat_C3",
+            "realName": "fpu_stat_C3",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_C3",
+                "registerNumber": 275
+            }
+        },
+        {
+            "name": "fpu_stat_DE",
+            "realName": "fpu_stat_DE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_DE",
+                "registerNumber": 265
+            }
+        },
+        {
+            "name": "fpu_stat_ES",
+            "realName": "fpu_stat_ES",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_ES",
+                "registerNumber": 271
+            }
+        },
+        {
+            "name": "fpu_stat_IE",
+            "realName": "fpu_stat_IE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_IE",
+                "registerNumber": 264
+            }
+        },
+        {
+            "name": "fpu_stat_OE",
+            "realName": "fpu_stat_OE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_OE",
+                "registerNumber": 267
+            }
+        },
+        {
+            "name": "fpu_stat_PE",
+            "realName": "fpu_stat_PE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_PE",
+                "registerNumber": 269
+            }
+        },
+        {
+            "name": "fpu_stat_SF",
+            "realName": "fpu_stat_SF",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_SF",
+                "registerNumber": 270
+            }
+        },
+        {
+            "name": "fpu_stat_TOP",
+            "realName": "fpu_stat_TOP",
+            "type": {
+                "llvmIr": "i3"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_TOP",
+                "registerNumber": 276
+            }
+        },
+        {
+            "name": "fpu_stat_UE",
+            "realName": "fpu_stat_UE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_UE",
+                "registerNumber": 268
+            }
+        },
+        {
+            "name": "fpu_stat_ZE",
+            "realName": "fpu_stat_ZE",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fpu_stat_ZE",
+                "registerNumber": 266
+            }
+        },
+        {
+            "name": "fs",
+            "realName": "fs",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "fs",
+                "registerNumber": 32
+            }
+        },
+        {
+            "name": "gs",
+            "realName": "gs",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "gs",
+                "registerNumber": 33
+            }
+        },
+        {
+            "name": "id",
+            "realName": "id",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "id",
+                "registerNumber": 263
+            }
+        },
+        {
+            "name": "if",
+            "realName": "if",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "if",
+                "registerNumber": 253
+            }
+        },
+        {
+            "name": "iopl",
+            "realName": "iopl",
+            "type": {
+                "llvmIr": "i2"
+            },
+            "storage": {
+                "type": "register",
+                "value": "iopl",
+                "registerNumber": 256
+            }
+        },
+        {
+            "name": "k0",
+            "realName": "k0",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k0",
+                "registerNumber": 90
+            }
+        },
+        {
+            "name": "k1",
+            "realName": "k1",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k1",
+                "registerNumber": 91
+            }
+        },
+        {
+            "name": "k2",
+            "realName": "k2",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k2",
+                "registerNumber": 92
+            }
+        },
+        {
+            "name": "k3",
+            "realName": "k3",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k3",
+                "registerNumber": 93
+            }
+        },
+        {
+            "name": "k4",
+            "realName": "k4",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k4",
+                "registerNumber": 94
+            }
+        },
+        {
+            "name": "k5",
+            "realName": "k5",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k5",
+                "registerNumber": 95
+            }
+        },
+        {
+            "name": "k6",
+            "realName": "k6",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k6",
+                "registerNumber": 96
+            }
+        },
+        {
+            "name": "k7",
+            "realName": "k7",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "k7",
+                "registerNumber": 97
+            }
+        },
+        {
+            "name": "mm0",
+            "realName": "mm0",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm0",
+                "registerNumber": 98
+            }
+        },
+        {
+            "name": "mm1",
+            "realName": "mm1",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm1",
+                "registerNumber": 99
+            }
+        },
+        {
+            "name": "mm2",
+            "realName": "mm2",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm2",
+                "registerNumber": 100
+            }
+        },
+        {
+            "name": "mm3",
+            "realName": "mm3",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm3",
+                "registerNumber": 101
+            }
+        },
+        {
+            "name": "mm4",
+            "realName": "mm4",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm4",
+                "registerNumber": 102
+            }
+        },
+        {
+            "name": "mm5",
+            "realName": "mm5",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm5",
+                "registerNumber": 103
+            }
+        },
+        {
+            "name": "mm6",
+            "realName": "mm6",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm6",
+                "registerNumber": 104
+            }
+        },
+        {
+            "name": "mm7",
+            "realName": "mm7",
+            "type": {
+                "llvmIr": "i64"
+            },
+            "storage": {
+                "type": "register",
+                "value": "mm7",
+                "registerNumber": 105
+            }
+        },
+        {
+            "name": "nt",
+            "realName": "nt",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "nt",
+                "registerNumber": 257
+            }
+        },
+        {
+            "name": "of",
+            "realName": "of",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "of",
+                "registerNumber": 255
+            }
+        },
+        {
+            "name": "pf",
+            "realName": "pf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "pf",
+                "registerNumber": 248
+            }
+        },
+        {
+            "name": "rf",
+            "realName": "rf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "rf",
+                "registerNumber": 258
+            }
+        },
+        {
+            "name": "sf",
+            "realName": "sf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "sf",
+                "registerNumber": 251
+            }
+        },
+        {
+            "name": "ss",
+            "realName": "ss",
+            "type": {
+                "llvmIr": "i16"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ss",
+                "registerNumber": 49
+            }
+        },
+        {
+            "name": "st0",
+            "realName": "st0",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st0",
+                "registerNumber": 114
+            }
+        },
+        {
+            "name": "st1",
+            "realName": "st1",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st1",
+                "registerNumber": 115
+            }
+        },
+        {
+            "name": "st2",
+            "realName": "st2",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st2",
+                "registerNumber": 116
+            }
+        },
+        {
+            "name": "st3",
+            "realName": "st3",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st3",
+                "registerNumber": 117
+            }
+        },
+        {
+            "name": "st4",
+            "realName": "st4",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st4",
+                "registerNumber": 118
+            }
+        },
+        {
+            "name": "st5",
+            "realName": "st5",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st5",
+                "registerNumber": 119
+            }
+        },
+        {
+            "name": "st6",
+            "realName": "st6",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st6",
+                "registerNumber": 120
+            }
+        },
+        {
+            "name": "st7",
+            "realName": "st7",
+            "type": {
+                "llvmIr": "x86_fp80"
+            },
+            "storage": {
+                "type": "register",
+                "value": "st7",
+                "registerNumber": 121
+            }
+        },
+        {
+            "name": "tf",
+            "realName": "tf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "tf",
+                "registerNumber": 252
+            }
+        },
+        {
+            "name": "vif",
+            "realName": "vif",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "vif",
+                "registerNumber": 261
+            }
+        },
+        {
+            "name": "vip",
+            "realName": "vip",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "vip",
+                "registerNumber": 262
+            }
+        },
+        {
+            "name": "vm",
+            "realName": "vm",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "vm",
+                "registerNumber": 259
+            }
+        },
+        {
+            "name": "xmm0",
+            "realName": "xmm0",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm0",
+                "registerNumber": 122
+            }
+        },
+        {
+            "name": "xmm1",
+            "realName": "xmm1",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm1",
+                "registerNumber": 123
+            }
+        },
+        {
+            "name": "xmm10",
+            "realName": "xmm10",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm10",
+                "registerNumber": 132
+            }
+        },
+        {
+            "name": "xmm11",
+            "realName": "xmm11",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm11",
+                "registerNumber": 133
+            }
+        },
+        {
+            "name": "xmm12",
+            "realName": "xmm12",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm12",
+                "registerNumber": 134
+            }
+        },
+        {
+            "name": "xmm13",
+            "realName": "xmm13",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm13",
+                "registerNumber": 135
+            }
+        },
+        {
+            "name": "xmm14",
+            "realName": "xmm14",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm14",
+                "registerNumber": 136
+            }
+        },
+        {
+            "name": "xmm15",
+            "realName": "xmm15",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm15",
+                "registerNumber": 137
+            }
+        },
+        {
+            "name": "xmm16",
+            "realName": "xmm16",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm16",
+                "registerNumber": 138
+            }
+        },
+        {
+            "name": "xmm17",
+            "realName": "xmm17",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm17",
+                "registerNumber": 139
+            }
+        },
+        {
+            "name": "xmm18",
+            "realName": "xmm18",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm18",
+                "registerNumber": 140
+            }
+        },
+        {
+            "name": "xmm19",
+            "realName": "xmm19",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm19",
+                "registerNumber": 141
+            }
+        },
+        {
+            "name": "xmm2",
+            "realName": "xmm2",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm2",
+                "registerNumber": 124
+            }
+        },
+        {
+            "name": "xmm20",
+            "realName": "xmm20",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm20",
+                "registerNumber": 142
+            }
+        },
+        {
+            "name": "xmm21",
+            "realName": "xmm21",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm21",
+                "registerNumber": 143
+            }
+        },
+        {
+            "name": "xmm22",
+            "realName": "xmm22",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm22",
+                "registerNumber": 144
+            }
+        },
+        {
+            "name": "xmm23",
+            "realName": "xmm23",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm23",
+                "registerNumber": 145
+            }
+        },
+        {
+            "name": "xmm24",
+            "realName": "xmm24",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm24",
+                "registerNumber": 146
+            }
+        },
+        {
+            "name": "xmm25",
+            "realName": "xmm25",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm25",
+                "registerNumber": 147
+            }
+        },
+        {
+            "name": "xmm26",
+            "realName": "xmm26",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm26",
+                "registerNumber": 148
+            }
+        },
+        {
+            "name": "xmm27",
+            "realName": "xmm27",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm27",
+                "registerNumber": 149
+            }
+        },
+        {
+            "name": "xmm28",
+            "realName": "xmm28",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm28",
+                "registerNumber": 150
+            }
+        },
+        {
+            "name": "xmm29",
+            "realName": "xmm29",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm29",
+                "registerNumber": 151
+            }
+        },
+        {
+            "name": "xmm3",
+            "realName": "xmm3",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm3",
+                "registerNumber": 125
+            }
+        },
+        {
+            "name": "xmm30",
+            "realName": "xmm30",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm30",
+                "registerNumber": 152
+            }
+        },
+        {
+            "name": "xmm31",
+            "realName": "xmm31",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm31",
+                "registerNumber": 153
+            }
+        },
+        {
+            "name": "xmm4",
+            "realName": "xmm4",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm4",
+                "registerNumber": 126
+            }
+        },
+        {
+            "name": "xmm5",
+            "realName": "xmm5",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm5",
+                "registerNumber": 127
+            }
+        },
+        {
+            "name": "xmm6",
+            "realName": "xmm6",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm6",
+                "registerNumber": 128
+            }
+        },
+        {
+            "name": "xmm7",
+            "realName": "xmm7",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm7",
+                "registerNumber": 129
+            }
+        },
+        {
+            "name": "xmm8",
+            "realName": "xmm8",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm8",
+                "registerNumber": 130
+            }
+        },
+        {
+            "name": "xmm9",
+            "realName": "xmm9",
+            "type": {
+                "llvmIr": "i128"
+            },
+            "storage": {
+                "type": "register",
+                "value": "xmm9",
+                "registerNumber": 131
+            }
+        },
+        {
+            "name": "ymm0",
+            "realName": "ymm0",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm0",
+                "registerNumber": 154
+            }
+        },
+        {
+            "name": "ymm1",
+            "realName": "ymm1",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm1",
+                "registerNumber": 155
+            }
+        },
+        {
+            "name": "ymm10",
+            "realName": "ymm10",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm10",
+                "registerNumber": 164
+            }
+        },
+        {
+            "name": "ymm11",
+            "realName": "ymm11",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm11",
+                "registerNumber": 165
+            }
+        },
+        {
+            "name": "ymm12",
+            "realName": "ymm12",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm12",
+                "registerNumber": 166
+            }
+        },
+        {
+            "name": "ymm13",
+            "realName": "ymm13",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm13",
+                "registerNumber": 167
+            }
+        },
+        {
+            "name": "ymm14",
+            "realName": "ymm14",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm14",
+                "registerNumber": 168
+            }
+        },
+        {
+            "name": "ymm15",
+            "realName": "ymm15",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm15",
+                "registerNumber": 169
+            }
+        },
+        {
+            "name": "ymm16",
+            "realName": "ymm16",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm16",
+                "registerNumber": 170
+            }
+        },
+        {
+            "name": "ymm17",
+            "realName": "ymm17",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm17",
+                "registerNumber": 171
+            }
+        },
+        {
+            "name": "ymm18",
+            "realName": "ymm18",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm18",
+                "registerNumber": 172
+            }
+        },
+        {
+            "name": "ymm19",
+            "realName": "ymm19",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm19",
+                "registerNumber": 173
+            }
+        },
+        {
+            "name": "ymm2",
+            "realName": "ymm2",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm2",
+                "registerNumber": 156
+            }
+        },
+        {
+            "name": "ymm20",
+            "realName": "ymm20",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm20",
+                "registerNumber": 174
+            }
+        },
+        {
+            "name": "ymm21",
+            "realName": "ymm21",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm21",
+                "registerNumber": 175
+            }
+        },
+        {
+            "name": "ymm22",
+            "realName": "ymm22",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm22",
+                "registerNumber": 176
+            }
+        },
+        {
+            "name": "ymm23",
+            "realName": "ymm23",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm23",
+                "registerNumber": 177
+            }
+        },
+        {
+            "name": "ymm24",
+            "realName": "ymm24",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm24",
+                "registerNumber": 178
+            }
+        },
+        {
+            "name": "ymm25",
+            "realName": "ymm25",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm25",
+                "registerNumber": 179
+            }
+        },
+        {
+            "name": "ymm26",
+            "realName": "ymm26",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm26",
+                "registerNumber": 180
+            }
+        },
+        {
+            "name": "ymm27",
+            "realName": "ymm27",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm27",
+                "registerNumber": 181
+            }
+        },
+        {
+            "name": "ymm28",
+            "realName": "ymm28",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm28",
+                "registerNumber": 182
+            }
+        },
+        {
+            "name": "ymm29",
+            "realName": "ymm29",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm29",
+                "registerNumber": 183
+            }
+        },
+        {
+            "name": "ymm3",
+            "realName": "ymm3",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm3",
+                "registerNumber": 157
+            }
+        },
+        {
+            "name": "ymm30",
+            "realName": "ymm30",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm30",
+                "registerNumber": 184
+            }
+        },
+        {
+            "name": "ymm31",
+            "realName": "ymm31",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm31",
+                "registerNumber": 185
+            }
+        },
+        {
+            "name": "ymm4",
+            "realName": "ymm4",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm4",
+                "registerNumber": 158
+            }
+        },
+        {
+            "name": "ymm5",
+            "realName": "ymm5",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm5",
+                "registerNumber": 159
+            }
+        },
+        {
+            "name": "ymm6",
+            "realName": "ymm6",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm6",
+                "registerNumber": 160
+            }
+        },
+        {
+            "name": "ymm7",
+            "realName": "ymm7",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm7",
+                "registerNumber": 161
+            }
+        },
+        {
+            "name": "ymm8",
+            "realName": "ymm8",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm8",
+                "registerNumber": 162
+            }
+        },
+        {
+            "name": "ymm9",
+            "realName": "ymm9",
+            "type": {
+                "llvmIr": "i256"
+            },
+            "storage": {
+                "type": "register",
+                "value": "ymm9",
+                "registerNumber": 163
+            }
+        },
+        {
+            "name": "zf",
+            "realName": "zf",
+            "type": {
+                "llvmIr": "i1"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zf",
+                "registerNumber": 250
+            }
+        },
+        {
+            "name": "zmm0",
+            "realName": "zmm0",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm0",
+                "registerNumber": 186
+            }
+        },
+        {
+            "name": "zmm1",
+            "realName": "zmm1",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm1",
+                "registerNumber": 187
+            }
+        },
+        {
+            "name": "zmm10",
+            "realName": "zmm10",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm10",
+                "registerNumber": 196
+            }
+        },
+        {
+            "name": "zmm11",
+            "realName": "zmm11",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm11",
+                "registerNumber": 197
+            }
+        },
+        {
+            "name": "zmm12",
+            "realName": "zmm12",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm12",
+                "registerNumber": 198
+            }
+        },
+        {
+            "name": "zmm13",
+            "realName": "zmm13",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm13",
+                "registerNumber": 199
+            }
+        },
+        {
+            "name": "zmm14",
+            "realName": "zmm14",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm14",
+                "registerNumber": 200
+            }
+        },
+        {
+            "name": "zmm15",
+            "realName": "zmm15",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm15",
+                "registerNumber": 201
+            }
+        },
+        {
+            "name": "zmm16",
+            "realName": "zmm16",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm16",
+                "registerNumber": 202
+            }
+        },
+        {
+            "name": "zmm17",
+            "realName": "zmm17",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm17",
+                "registerNumber": 203
+            }
+        },
+        {
+            "name": "zmm18",
+            "realName": "zmm18",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm18",
+                "registerNumber": 204
+            }
+        },
+        {
+            "name": "zmm19",
+            "realName": "zmm19",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm19",
+                "registerNumber": 205
+            }
+        },
+        {
+            "name": "zmm2",
+            "realName": "zmm2",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm2",
+                "registerNumber": 188
+            }
+        },
+        {
+            "name": "zmm20",
+            "realName": "zmm20",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm20",
+                "registerNumber": 206
+            }
+        },
+        {
+            "name": "zmm21",
+            "realName": "zmm21",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm21",
+                "registerNumber": 207
+            }
+        },
+        {
+            "name": "zmm22",
+            "realName": "zmm22",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm22",
+                "registerNumber": 208
+            }
+        },
+        {
+            "name": "zmm23",
+            "realName": "zmm23",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm23",
+                "registerNumber": 209
+            }
+        },
+        {
+            "name": "zmm24",
+            "realName": "zmm24",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm24",
+                "registerNumber": 210
+            }
+        },
+        {
+            "name": "zmm25",
+            "realName": "zmm25",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm25",
+                "registerNumber": 211
+            }
+        },
+        {
+            "name": "zmm26",
+            "realName": "zmm26",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm26",
+                "registerNumber": 212
+            }
+        },
+        {
+            "name": "zmm27",
+            "realName": "zmm27",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm27",
+                "registerNumber": 213
+            }
+        },
+        {
+            "name": "zmm28",
+            "realName": "zmm28",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm28",
+                "registerNumber": 214
+            }
+        },
+        {
+            "name": "zmm29",
+            "realName": "zmm29",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm29",
+                "registerNumber": 215
+            }
+        },
+        {
+            "name": "zmm3",
+            "realName": "zmm3",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm3",
+                "registerNumber": 189
+            }
+        },
+        {
+            "name": "zmm30",
+            "realName": "zmm30",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm30",
+                "registerNumber": 216
+            }
+        },
+        {
+            "name": "zmm31",
+            "realName": "zmm31",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm31",
+                "registerNumber": 217
+            }
+        },
+        {
+            "name": "zmm4",
+            "realName": "zmm4",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm4",
+                "registerNumber": 190
+            }
+        },
+        {
+            "name": "zmm5",
+            "realName": "zmm5",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm5",
+                "registerNumber": 191
+            }
+        },
+        {
+            "name": "zmm6",
+            "realName": "zmm6",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm6",
+                "registerNumber": 192
+            }
+        },
+        {
+            "name": "zmm7",
+            "realName": "zmm7",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm7",
+                "registerNumber": 193
+            }
+        },
+        {
+            "name": "zmm8",
+            "realName": "zmm8",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm8",
+                "registerNumber": 194
+            }
+        },
+        {
+            "name": "zmm9",
+            "realName": "zmm9",
+            "type": {
+                "llvmIr": "i512"
+            },
+            "storage": {
+                "type": "register",
+                "value": "zmm9",
+                "registerNumber": 195
+            }
+        }
+    ]
+}
