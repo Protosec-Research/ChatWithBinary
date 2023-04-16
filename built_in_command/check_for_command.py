@@ -19,7 +19,7 @@ def check(text_query):
             print(prompt)
         return prompt        
     else:
-        pass
+        return text_query
 
 def help():
     helper = """\n

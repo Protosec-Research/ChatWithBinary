@@ -1,5 +1,7 @@
 # Ret2GPT
 
+<img width="1000" alt="Xnip2023-04-16_11-36-38" src="https://user-images.githubusercontent.com/72267897/232265065-cf63b1d8-37ea-4eaa-b64e-e434eb369c16.png">
+
 `RET2GPT` is a cutting-edge software tool designed to analyze binary files using the **LangChain** (OpenAI API) technology. It primarily focuses on aiding CTF (Capture The Flag) Pwners in gaining a deeper understanding of the binary files they are working with and providing valuable assistance to help them solve challenges more effectively :)
 
 `RET2GPT`  is built upon a strong foundation of artificial intelligence and machine learning, which enables it to analyze complex binary files quickly and efficiently. By leveraging the power of `OpenAI API`, RET2GPT can offer a comprehensive and detailed analysis of binary files, making it an indispensable tool for CTF Pwners.
@@ -37,9 +39,37 @@ First, the usage of this file in commandline is:
 Usage: ret2gpt [FILE_PATH]
 ```
 
-The commands in the program are super easy, I am sure you will figure out yourself, but if you still have any questions, you can always ask me by opening an issue on our github repo.
+Now, you entered the commandline interface, You can ask **ANYQUESTION YOU WANT**
 
-<img width="800" alt="Xnip2023-04-16_11-04-30" src="https://user-images.githubusercontent.com/72267897/232264043-5f3a2c02-8068-42c5-aae1-dd858c4abfcb.png">
+for example, if want to find of the program is vulnerable to buffer overflow, you can ask:
+```
+ What do you want to ask about example2/hacknote.c >>> Are there any buffer overflow based on the program?
+
+🏂 PwnGPT: 100% YES, there are several potential buffer overflow vulnerabilities in this code. 
+ The add_note() function uses the read() function to read user input into a buffer without specifying a maximum buffer size, 
+ which could allow an attacker to overflow the buffer and overwrite adjacent memory locations.
+ Additionally, the print_note() and del_note() functions also read user input without proper boundary checks, which could result in buffer overflows. 
+ To fix these issues, implement proper input validation and boundary checks before reading user input, and use functions like fgets() or scanf() that allow specifying a maximum buffer size.
+```
+
+you can use `help` command to get the help message:
+```
+What do you want to ask about example2/hacknote.c >>> /help
+
+
+    /analysis - Get the prompt for analysis the code from a Pwn perspective
+    /exp - Get the exp template that can be used by "Pwntools" for this file
+    /exit - Exit the program
+
+
+ What do you want to ask about example2/hacknote.c >>>
+ ```
+I am sure you will figure out yourself what does two commands means
+
+
+<!-- The commands in the program are super easy, I am sure you will figure out yourself, but if you still have any questions, you can always ask me by opening an issue on our github repo. -->
+
+<!-- <img width="800" alt="Xnip2023-04-16_11-04-30" src="https://user-images.githubusercontent.com/72267897/232264043-5f3a2c02-8068-42c5-aae1-dd858c4abfcb.png"> -->
 
 # How does Ret2GPT works?
 

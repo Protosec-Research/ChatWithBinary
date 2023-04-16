@@ -106,12 +106,12 @@ def build_prompt_for_qa(query):
         # },
     ]
     
-    example_template = "User: {query} (Based on the code)\GPT: {answer}"
+    example_template = "User: {query}\GPT: {answer}"
     example_prompt = PromptTemplate(
         input_variables=["query", "answer"],
         template=example_template
     )
-    suffix = "User: {query}\nAI: "
+    suffix = "User: {query}\nGPT: "
     from langchain import FewShotPromptTemplate
     few_shot_prompt_template = FewShotPromptTemplate(
         examples=examples,

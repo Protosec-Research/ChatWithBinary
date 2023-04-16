@@ -134,3 +134,4 @@ dmypy.json
 example2/
 langchain_preprocess/__pycache__
 *.pyc
+.chroma/
