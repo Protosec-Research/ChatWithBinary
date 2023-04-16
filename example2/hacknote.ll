@@ -130,6 +130,7 @@ dec_label_pc_80487ff:                             ; preds = %dec_label_pc_80487f
   uselistorder i32* %10, { 1, 0, 2 }
   uselistorder i32* %stack_var_-24, { 1, 0 }
   uselistorder i32* %storemerge2.reg2mem, { 2, 0, 1 }
+  uselistorder i32* (i32)* @malloc, { 1, 0 }
   uselistorder label %dec_label_pc_80486b3, { 1, 0 }
 }
 
@@ -191,6 +192,7 @@ dec_label_pc_80488d3:                             ; preds = %dec_label_pc_80488c
 ; uselistorder directives
   uselistorder i32 %4, { 0, 2, 1 }
   uselistorder i32* %stack_var_-20, { 1, 0 }
+  uselistorder void (i32*)* @free, { 1, 0 }
 }
 
 define i32 @print_note() local_unnamed_addr {
@@ -231,6 +233,8 @@ dec_label_pc_8048984:                             ; preds = %dec_label_pc_804897
 ; uselistorder directives
   uselistorder i32 %4, { 1, 0 }
   uselistorder i32* %stack_var_-20, { 1, 0 }
+  uselistorder void ()* @__stack_chk_fail, { 2, 1, 0 }
+  uselistorder void (i32)* @_exit, { 1, 0 }
 }
 
 define i32 @menu() local_unnamed_addr {
@@ -245,6 +249,9 @@ dec_label_pc_804899f:
   %7 = call i32 @puts(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @global_var_8048bd9, i32 0, i32 0)), !insn.addr !89
   %8 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @global_var_8048c63, i32 0, i32 0)), !insn.addr !90
   ret i32 %8, !insn.addr !91
+
+; uselistorder directives
+  uselistorder i32 (i8*, ...)* @printf, { 4, 3, 2, 1, 0 }
 }
 
 define i32 @main(i32 %argc, i8** %argv) local_unnamed_addr {
@@ -320,8 +327,10 @@ dec_label_pc_8048af0:                             ; preds = %dec_label_pc_8048ad
 ; uselistorder directives
   uselistorder i32 %16, { 0, 2, 1, 3 }
   uselistorder i32* %13, { 1, 0, 2, 3 }
-  uselistorder i32 (i8*)* @puts, { 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }
-  uselistorder i32 (i32, i32*, i32)* @read, { 2, 4, 3, 1, 0 }
+  uselistorder i32 (i8*)* @puts, { 15, 13, 14, 9, 11, 10, 12, 8, 7, 6, 5, 4, 3, 2, 1, 0 }
+  uselistorder void (i32)* @exit, { 2, 1, 0 }
+  uselistorder i32 (i8*)* @atoi, { 3, 2, 1, 0 }
+  uselistorder i32 (i32, i32*, i32)* @read, { 3, 4, 2, 1, 0 }
   uselistorder i32* @0, { 0, 2, 1 }
   uselistorder i32 ptrtoint (i32* @0 to i32), { 3, 4, 5, 0, 1, 2 }
   uselistorder i32 4, { 2, 5, 3, 6, 0, 4, 7, 8, 9, 1 }
