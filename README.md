@@ -9,6 +9,7 @@
 `RET2GPT` is a cutting-edge software tool designed to analyze binary files using the **LangChain** (OpenAI API) technology. It primarily focuses on aiding CTF (Capture The Flag) Pwners in gaining a deeper understanding of the binary files they are working with and providing valuable assistance to help them solve challenges more effectively :)
 
 [中文文档 README 📖](README.zh_CN.md)
+
 [English README 📖](README.md)
 
 `RET2GPT`  is built upon a strong foundation of artificial intelligence and machine learning, which enables it to analyze complex binary files quickly and efficiently. By leveraging the power of `OpenAI API`, RET2GPT can offer a comprehensive and detailed analysis of binary files, making it an indispensable tool for CTF Pwners.

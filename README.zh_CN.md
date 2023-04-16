@@ -8,6 +8,7 @@
 `RET2GPT` 是一款采用 LangChain（OpenAI API）技术分析二进制文件的尖端软件工具。它主要专注于帮助 CTF（Capture The Flag）Pwners 深入了解他们正在处理的二进制文件，并为他们提供有价值的帮助，以便更有效地解决挑战 :)
 
 [中文文档 README 📖](README.zh_CN.md)
+
 [English README 📖](README.md)
 
 `RET2GPT` 建立在人工智能和机器学习的坚实基础之上，使其能够快速有效地分析复杂的二进制文件。通过利用 OpenAI API `的能力，RET2GPT` 可以为二进制文件提供全面而详细的分析，使其成为 CTF Pwners 不可或缺的工具。
