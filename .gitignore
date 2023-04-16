@@ -5,7 +5,8 @@
 
 # C extensions
 *.so
-
+*.dsm
+*.ll
 # Distribution / packaging
 .Python
 build/
