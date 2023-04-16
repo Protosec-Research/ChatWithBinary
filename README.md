@@ -44,7 +44,7 @@ After that, you can use `ret2gpt` command to run our software from anywhere, wha
 # Usage
 Before you start, you need to set your `OPENAI_KEY` in the terminal, you can get your key from [here](https://beta.openai.com/docs/developer-quickstart)
 ```
-export OPENAI_API_KEY= [YOUR_OPENAI_KEY]
+export OPENAI_API_KEY="Enter your api_key here"
 ```
 First, the usage of this file in commandline is:
 ```

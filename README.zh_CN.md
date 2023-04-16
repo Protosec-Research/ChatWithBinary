@@ -42,7 +42,7 @@ python3 ret2gpt
 # 使用方法
 开始之前你需要设定你的 `OPENAI_KEY` , 你可以在 [这里](https://beta.openai.com/docs/developer-quickstart) 获取到你的`key` 
 ```
-export OPENAI_API_KEY= [YOUR_OPENAI_KEY]
+export OPENAI_API_KEY="这里输入你的API_KEY"
 ```
 之后，在命令行中使用此文件的方法是：
 ```
