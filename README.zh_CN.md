@@ -4,7 +4,7 @@
 <img width="1000" alt="Xnip2023-04-16_11-36-38" src="https://user-images.githubusercontent.com/72267897/232265065-cf63b1d8-37ea-4eaa-b64e-e434eb369c16.png">
 
 
-*由于我用的是英文写的README，所以如果有翻译不好的请大家谅解 :(*
+<!-- *由于我用的是英文写的README，所以如果有翻译不好的请大家谅解 :(* -->
 `RET2GPT` 是一款采用 LangChain（OpenAI API）技术分析二进制文件的尖端软件工具。它主要专注于帮助 CTF（Capture The Flag）Pwners 深入了解他们正在处理的二进制文件，并为他们提供有价值的帮助，以便更有效地解决挑战 :)
 
 [中文文档 README 📖](README.zh_CN.md)
