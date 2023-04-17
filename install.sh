@@ -1,7 +1,7 @@
 #!/bin/bash
 #!/bin/bash
 
-read -p "Are you from China (use a faster mirror)? (y/n): " from_china
+read -p "Are you from China (use a anthor mirror)? (y/n): " from_china
 
 os_name=$(uname)
 
@@ -32,11 +32,19 @@ fi
 echo "Adding bin/ from retdec to PATH ..."
 retdec_bin_path="$(pwd)/${retdec_folder}/bin"
 
-if [ "$os_name" == "Darwin" ]; then
-    echo "export PATH=\"$retdec_bin_path:\$PATH\"" | sudo tee -a /etc/paths
-elif [ "$os_name" == "Linux" ]; then
-    echo "export PATH=\"$retdec_bin_path:\$PATH\"" | sudo tee -a /etc/profile
+current_shell=$(basename "$SHELL")
+
+if [ "$current_shell" == "zsh" ]; then
+    config_file="$HOME/.zshrc"
+elif [ "$current_shell" == "bash" ]; then
+    config_file="$HOME/.bashrc"
+else
+    echo "unable to recognize your shell,please add this to shell config:"
+    echo "export PATH=\"$retdec_bin_path:\$PATH\""
+    exit 1
 fi
+
+echo "export PATH=\"$retdec_bin_path:\$PATH\"" >> "$config_file"
 
 python_path=$(which python3)
 echo "#!$python_path" > temp_file.txt
