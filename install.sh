@@ -6,6 +6,6 @@ mv temp_file.txt Ret2GPT.py
 
 
 python3 -m pip install -r requirements.txt
-ln -s "$(pwd)/Ret2GPT.py" /usr/local/bin/ret2gpt
-chmod +x /usr/local/bin/ret2gpt
+sudo ln -s "$(pwd)/Ret2GPT.py" /usr/local/bin/ret2gpt
+sudo chmod +x /usr/local/bin/ret2gpt
 echo "Installation completed successfully."

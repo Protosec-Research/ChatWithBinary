@@ -37,7 +37,7 @@ python3 ret2gpt
 ```
 However, if  you want tot use `Ret2GPT` permanently, you can easily install it by executing the `install.sh` file:
 ```
-./install.sh
+chmod +x install.sh && ./install.sh
 ```
 After that, you can use `ret2gpt` command to run our software from anywhere, what a magic is that?
 
