@@ -46,6 +46,14 @@ fi
 
 echo "export PATH=\"$retdec_bin_path:\$PATH\"" >> "$config_file"
 
+read -p "Do you have OpenAI API Key? (you can skip this part and add maunally) (y/n): " has_openai_key
+
+# 如果用户有 API Key，则将其添加到相应的 shell 配置文件中
+if [ "$has_openai_key" == "y" ] || [ "$has_openai_key" == "Y" ]; then
+    read -p "Please input your OpenAI API Key: " openai_api_key
+    echo "export OPENAI_API_KEY=\"$openai_api_key\"" >> "$config_file"
+fi
+
 python_path=$(which python3)
 echo "#!$python_path" > temp_file.txt
 cat Ret2GPT.py >> temp_file.txt
