@@ -35,7 +35,7 @@ python3 ret2gpt
 ```
 然而，如果你想永久使用 Ret2GPT，你可以通过执行 install.sh 文件轻松安装它! 你可以通过以下方式运行它：
 ```
-./install.sh
+chmod +x install.sh && ./install.sh
 ```     
 之后，您可以使用 ret2gpt 命令从任何地方运行我们的软件，这是多么神奇？
 
