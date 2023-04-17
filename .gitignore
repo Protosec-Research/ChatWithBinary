@@ -8,6 +8,7 @@
 *.dsm
 *.ll
 *.c
+*.pyc
 # Distribution / packaging
 .Python
 build/

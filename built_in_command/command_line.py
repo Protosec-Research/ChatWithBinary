@@ -118,8 +118,6 @@ def loop():
             with console.status("Generating output...", spinner="monkey"):
                 answer = pwnchain.query_about_files(qa=created_qa,query=text_query)
             text = f"\n[bold medium_purple1]:snowboarder: PwnGPT[/bold medium_purple1]:[sky_blue2] {answer}[/sky_blue2]"
-            # text = text.replace(".", ".\n")
-            # text = Panel(text,padding=(1,1))
             log_console.print(text)
         
 def main():

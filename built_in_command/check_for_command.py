@@ -17,6 +17,17 @@ def check(text_query):
             Your response should be clear, concise, and well-organized to ensure maximum understanding and effectiveness.
             """
             print(prompt)
+        
+        elif "contain" in text_query[1:]:
+            if len(text_query.split(" ")) != 2:
+                print("Invalid target, are you sure the target is a single word; NO PROMPT GENERATED")
+                return 0
+            target = text_query.split(" ")[1].strip()
+            prompt = f"""
+            Do this code contain any {target} vulnerabilities?
+            """
+            
+            
         return prompt        
     else:
         return text_query
@@ -24,6 +35,7 @@ def check(text_query):
 def help():
     helper = """\n
     /analysis - Get the prompt for analysis the code from a Pwn perspective
+    /contain - Get the prompt for asking if the code contain a specific vulnerability, e.g. /contain "buffer-overflow"
     /exp - Get the exp template that can be used by \"Pwntools\" for this file
     /exit - Exit the program
     """
