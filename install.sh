@@ -3,8 +3,8 @@
 
 os_name=$(uname)
 
-macos_link="https://example.com/retdec-macos.tar.gz"
-linux_link="https://example.com/retdec-linux.tar.gz"
+macos_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-macOS-Release.tar.xz"
+linux_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-Linux-Release.tar.xz"
 
 # 下载对应版本的 retdec
 if [ "$os_name" == "Darwin" ]; then
