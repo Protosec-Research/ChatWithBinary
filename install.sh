@@ -1,24 +1,30 @@
 #!/bin/bash
 #!/bin/bash
 
+read -p "Are you from China (use a faster mirror)? (y/n): " from_china
+
 os_name=$(uname)
 
-macos_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-macOS-Release.tar.xz"
-linux_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-Linux-Release.tar.xz"
-
+if [ "$from_china" == "y" ] || [ "$from_china" == "Y" ]; then
+    macos_link="https://kgithub.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-macOS-Release.tar.xz"
+    linux_link="https://kgithub.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-Linux-Release.tar.xz"
+else
+    macos_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-macOS-Release.tar.xz"
+    linux_link="https://github.com/avast/retdec/releases/download/v5.0/RetDec-v5.0-Linux-Release.tar.xz"
+fi
 # 下载对应版本的 retdec
 if [ "$os_name" == "Darwin" ]; then
     echo "Oh, I see, so you are using MAC OS."
     echo "Downloading MacOS retdec ..."
     curl -L -o retdec-macos.tar.gz "$macos_link"
     echo "Download completed, now decompressing ..."
-    tar -xzvf retdec-macos.tar.gz
+    tar -xJvf retdec-macos.tar.gz
 elif [ "$os_name" == "Linux" ]; then
     echo "Oh, I see, so you are using Linux."
     echo "Downloading Linux retdec ..."
     wget -O retdec-linux.tar.gz "$linux_link"
     echo "Download completed, now decompressing ..."
-    tar -xzvf retdec-linux.tar.gz
+    tar -xJvf retdec-linux.tar.gz
 else
     echo "I don't know what OS you are using, please install retdec manually from https://github.com/avast/retdec"
 fi
