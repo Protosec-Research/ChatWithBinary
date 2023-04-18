@@ -61,6 +61,11 @@ mv temp_file.txt Ret2GPT.py
 
 
 python3 -m pip install -r requirements.txt
+
+# EXTRA INSTALLATION FOR LANGCHAIN
+python3 -m pip install chromadb
+python3 -m pip install tiktoken
+
 sudo ln -s "$(pwd)/Ret2GPT.py" /usr/local/bin/ret2gpt
 sudo chmod +x /usr/local/bin/ret2gpt
 echo -e "\033[31minstallation finished, PLEASE RESTART YOUR TERMINAL\033[0m"
