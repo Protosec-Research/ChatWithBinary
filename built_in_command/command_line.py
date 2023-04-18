@@ -116,7 +116,12 @@ def loop():
             text_query = check_for_command.check(text_query)
             text_query = pwnchain.build_prompt_for_qa(text_query)
             with console.status("Generating output...", spinner="monkey"):
-                answer = pwnchain.query_about_files(qa=created_qa,query=text_query)
+                #try pwnchain.query_about_files first, if raise chromadb.errors.NotEnoughElementsException, print "your file is to small"
+                try:
+                    answer = pwnchain.query_about_files(qa=created_qa,query=text_query)
+                except Exception as e:
+                    error_console.print(f"\n{e}")
+                    error_console.print(f"\n[bold red]Some error was rasie, It might be due to the fact that your file is too small[/bold red]")
             text = f"\n[bold medium_purple1]:snowboarder: PwnGPT[/bold medium_purple1]:[sky_blue2] {answer}[/sky_blue2]"
             log_console.print(text)
         
