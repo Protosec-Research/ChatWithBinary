@@ -120,8 +120,9 @@ def loop():
                 try:
                     answer = pwnchain.query_about_files(qa=created_qa,query=text_query)
                 except Exception as e:
-                    error_console.print(f"\n{e}")
-                    error_console.print(f"\n[bold red]Some error was rasie, It might be due to the fact that your file is too small[/bold red]")
+                    error_console.print(f"\n\nERROR: {e}")
+                    error_console.print(f"[bold red]Some error was rasie, It might be due to the fact that your file is too small[/bold red]")
+                    exit(0)
             text = f"\n[bold medium_purple1]:snowboarder: PwnGPT[/bold medium_purple1]:[sky_blue2] {answer}[/sky_blue2]"
             log_console.print(text)
         
