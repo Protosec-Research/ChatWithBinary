@@ -122,3 +122,25 @@ def build_prompt_for_qa(query):
         example_separator="\n\n"
     )
     return few_shot_prompt_template.format(query=query)
+
+def generate_pwntools_templates():
+    prompt = """
+    After analysising the function of every function of the source code;
+    You will need to generate a pwntools template that can be use by Python with the source provided.
+    the template should be looking like this: (Everything in the [] is a according to the program.)
+    
+    [function_name]([arguement]):
+        [code]
+    
+    For example; This is a function that can be use to interact with `delete` function in a certain heap exploition program:
+    
+    def deletenote(id):
+        p.recvuntil('option--->>')
+        p.sendline('4')
+        p.recvuntil('note:')
+        p.sendline(str(id))
+    
+    HINT: YOU WILL ONLY NEED TO GENERATE THE MAIN FUNCTION OF THE SOURCE CODE.
+    """
+    
+    return prompt

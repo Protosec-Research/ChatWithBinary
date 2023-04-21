@@ -101,6 +101,7 @@ def intro():
     console.print(hinter, justify="center")
 
 def loop():
+    
     from rich.prompt import Prompt
     import check_for_command
     path = retdec.retdec()
