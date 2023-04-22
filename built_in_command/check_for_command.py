@@ -38,6 +38,7 @@ def check(text_query):
                 [code]
         
             For example; This is a function that can be use to interact with [CERTAIN FUNCTION] function in a certain program:
+            in this case, p = process([CERTAIN PROGRAM])
         
             def [CERTAIN FUNCTION BASED ON THE CODE](argument1,argument2):
                 p.recvuntil([CERTAIN CONDITION BASED ON THE CODE])

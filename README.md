@@ -201,3 +201,7 @@ I think this part of `Ret2gpt` do not require that much of explaination, it is j
   * `__init__.py`: This file is responsible for initializing the `built_in_command` folder as a python package.
   * `check_for_command.py`: This file contains the `check()` and `help()` function, `check()` checks if the user input is a command, and return different prompt with the command, and `help()` prints the help message.
   * `command_line.py`: This file contains the `command_line()` function, which is the main function of the `built_in_command` folder. It is responsible for parsing the user input and calling the corresponding function. 
+
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DDizzzy79/Ret2GPT&type=Date)](https://star-history.com/#DDizzzy79/Ret2GPT&Date)

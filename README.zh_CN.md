@@ -190,3 +190,7 @@ def build_prompt_for_qa(query):
 该文件包含check()和help()函数，check()函数检查用户输入是否为命令，并返回不同的提示与命令，help()函数打印帮助信息。
 ## `command_line.py`：
 该文件包含command_line()函数，它是built_in_command文件夹的主要函数。它负责解析用户输入并调用相应的函数。
+
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DDizzzy79/Ret2GPT&type=Date)](https://star-history.com/#DDizzzy79/Ret2GPT&Date)
