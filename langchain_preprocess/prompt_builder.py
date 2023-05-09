@@ -14,7 +14,7 @@ model = ChatOpenAI(model='gpt-3.5-turbo')
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
 def build_reference_for_qa(path):
-    input_files = [f'{path}.c', f'{path}.ll']
+    input_files = [f'{path}.c']
     output_file = 'gpt_reference.txt'
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
@@ -28,11 +28,13 @@ def build_reference_for_qa(path):
 
 
 def loading(des):
-    return TextLoader(des, encoding='utf8')
+    from langchain.document_loaders import UnstructuredFileLoader
+    return UnstructuredFileLoader(des)
 
 def split_files(loader):
-    document = loader.load()
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0) # Changed from 1000 -> 500 incase the file is not big enough
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    document = loader.load()    
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200) # Changed from 1000 -> 500 incase the file is not big enough
     return text_splitter.split_documents(document)
 
 def create_qa(loader):
@@ -47,7 +49,7 @@ def create_qa(loader):
     # docsearch = Chroma.from_documents(split_files(loader), embeddings)
     # return VectorDBQA.from_chain_type(llm=model, chain_type="map_rerank", vectorstore=docsearch,return_source_documents=True)
     
-    return RetrievalQA.from_chain_type(llm=model, chain_type="refine", retriever=retriever)
+    return RetrievalQA.from_chain_type(llm=model, chain_type="stuff", retriever=retriever)
     
     # index_creator = VectorstoreIndexCreator(
     #     vectorstore_cls=Chroma, 
