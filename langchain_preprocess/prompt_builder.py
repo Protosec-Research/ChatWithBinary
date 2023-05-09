@@ -13,22 +13,42 @@ model = ChatOpenAI(model='gpt-3.5-turbo')
 
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
+def build_reference_for_qa(path):
+    input_files = [f'{path}.c', f'{path}.ll']
+    output_file = 'gpt_reference.txt'
+
+    with open(output_file, 'w', encoding='utf-8') as outfile:
+        for file_name in input_files:
+            with open(file_name, 'r', encoding='utf-8') as infile:
+                contents = infile.read()
+                outfile.write(f"\nThis is {file_name}.\n")
+                outfile.write(contents + '\n')
+    
+    return output_file
+
+
 def loading(des):
     return TextLoader(des, encoding='utf8')
 
 def split_files(loader):
     document = loader.load()
-    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=0) # Changed from 1000 -> 500 incase the file is not big enough
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0) # Changed from 1000 -> 500 incase the file is not big enough
     return text_splitter.split_documents(document)
 
 def create_qa(loader):
     from langchain.embeddings import OpenAIEmbeddings
     from langchain.vectorstores import Chroma
+    from langchain import VectorDBQA
     
     embeddings = OpenAIEmbeddings()
     db = Chroma.from_documents(split_files(loader), embeddings)
     retriever = db.as_retriever()
-    return RetrievalQA.from_chain_type(llm=model, chain_type="stuff", retriever=retriever)
+    # splited = split_files(loader)
+    # docsearch = Chroma.from_documents(split_files(loader), embeddings)
+    # return VectorDBQA.from_chain_type(llm=model, chain_type="map_rerank", vectorstore=docsearch,return_source_documents=True)
+    
+    return RetrievalQA.from_chain_type(llm=model, chain_type="refine", retriever=retriever)
+    
     # index_creator = VectorstoreIndexCreator(
     #     vectorstore_cls=Chroma, 
     #     embedding=OpenAIEmbeddings(),
@@ -36,17 +56,21 @@ def create_qa(loader):
     # ).from_loaders([loader])
     # return index_creator
     
-def qa_with_docs(loader,query):
-    from langchain.chains.question_answering import load_qa_chain
-    docs = split_files(loader)
-    chain = load_qa_chain(OpenAI(temperature=0), chain_type="map_reduce")
-    # chain.run(input_documents=loader.load(), question=query)
-    chain({"input_documents": docs[:20], "question": query}, return_only_outputs=True)
+# def qa_with_docs(loader,query):
+#     from langchain.chains.question_answering import load_qa_chain
+#     docs = split_files(loader)
+#     chain = load_qa_chain(OpenAI(temperature=0), chain_type="stuff")
+#     # chain.run(input_documents=loader.load(), question=query)
+    
+#     #little modification here
+#     chain({"input_documents": docs, "question": query}, return_only_outputs=True)
     
 
 def query_about_files(query,qa):
     # return query.query_with_sources(qa)
-    return qa.run(query)
+    # return qa.run(query)
+    
+    return qa({"query": query}, return_only_outputs=True)
 
 
 def summerize_chain(llm,file):
@@ -60,7 +84,7 @@ def build_prompt_for_qa(query):
     from langchain import PromptTemplate
     categories = ["Pwn","Reverse"]
     main_prompt = """
-    Description: You are PwnGPT: san analyst in the midst of a Capture the Flag (CTF) competition. 
+    Description: You are PwnGPT: an analyst in the midst of a Capture the Flag (CTF) competition. 
     Your task is to help contestants analyze decompiled C files derived from binary files they provide.
     You must give the possibility of the vulnerability first
     Keep in mind that you only have access to the C language files and are not able to ask for any additional information about the files.

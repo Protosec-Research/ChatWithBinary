@@ -28,6 +28,8 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+**/*.pyc
+**/*.
 MANIFEST
 
 # PyInstaller
@@ -135,6 +137,8 @@ dmypy.json
 .vscode/
 
 example2/
+example3/
 langchain_preprocess/__pycache__
 *.pyc
 .chroma/
+langchain_preprocess/prompt_builder.py

@@ -81,10 +81,10 @@ def intro():
     [bold magenta] Welcome to [/bold magenta][bold cyan]Ret2GPT[/bold cyan]
     [bold magenta] 欢迎来到 [/bold magenta][bold cyan]Ret2GPT[/bold cyan]
     """
-    Intro = """
-    DEVLOPE BY RETR0
-    ENJOY YOUR HACKING!
-    """
+    # Intro = """
+    # DEVLOPE BY RETR0
+    # ENJOY YOUR HACKING!
+    # """
     
     hinter = """
     \n[medium_orchid]HINT: USE [medium_purple3]/help[/medium_purple3] TO CHECK FOR COMMANDS\nUSE [medium_purple3]/[command][/medium_purple3] TO USE COMMANDS[/medium_orchid]
@@ -97,7 +97,7 @@ def intro():
     # console.print(header_table,justify="center")
     console.print(Welcome, justify="center")
     # console.print(Intro, justify="center")
-    console.print(gradient_text(Intro, "#614385", "#516395"),justify="center")
+    # console.print(gradient_text(Intro, "#614385", "#516395"),justify="center")
     console.print(hinter, justify="center")
 
 def loop():
@@ -105,8 +105,10 @@ def loop():
     from rich.prompt import Prompt
     import check_for_command
     path = retdec.retdec()
+    # removed .c
     with console.capture() as capture:
-        loader = pwnchain.loading(path)
+        reference = pwnchain.build_reference_for_qa(path)
+        loader = pwnchain.loading(reference)
         created_qa = pwnchain.create_qa(loader)
     
     while True:
@@ -118,12 +120,12 @@ def loop():
             text_query = pwnchain.build_prompt_for_qa(text_query)
             with console.status("Generating output...", spinner="monkey"):
                 #try pwnchain.query_about_files first, if raise chromadb.errors.NotEnoughElementsException, print "your file is to small"
-                try:
-                    answer = pwnchain.query_about_files(qa=created_qa,query=text_query)
-                except Exception as e:
-                    error_console.print(f"\n\nERROR: {e}")
-                    error_console.print(f"[bold red]Some error was rasie, It might be due to the fact that your file is too small[/bold red]")
-                    exit(0)
+                # try:
+                answer = pwnchain.query_about_files(qa=created_qa,query=text_query)['result']
+                # except Exception as e:
+                #     # error_console.print(f"\n\nERROR: {e}")
+                #     # error_console.print(f"[bold red]Some error was rasie, It might be due to the fact that your file is too small[/bold red]")
+                #     # exit(0)
             text = f"\n[bold medium_purple1]:snowboarder: PwnGPT[/bold medium_purple1]:[sky_blue2] {answer}[/sky_blue2]"
             log_console.print(text)
         

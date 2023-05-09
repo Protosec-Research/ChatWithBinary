@@ -17,4 +17,4 @@ def retdec():
     else:
         print(f" File {output_file} already exists, thank god. \n skipping \"retdec-decompile\", lets continue")
         
-    return input_file + ".c"
+    return input_file
