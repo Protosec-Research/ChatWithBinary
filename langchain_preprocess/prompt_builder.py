@@ -44,7 +44,7 @@ def create_qa(loader):
     
     embeddings = OpenAIEmbeddings()
     db = Chroma.from_documents(split_files(loader), embeddings)
-    retriever = db.as_retriever()
+    retriever = db.as_retriever(search_kwargs={"k": 1})
     # splited = split_files(loader)
     # docsearch = Chroma.from_documents(split_files(loader), embeddings)
     # return VectorDBQA.from_chain_type(llm=model, chain_type="map_rerank", vectorstore=docsearch,return_source_documents=True)
