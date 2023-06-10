@@ -30,6 +30,9 @@
 ```
 python3 -m pip --index-url=https://pypi.org/simple/ Ret2GPT
 ```
+
+此外，如果你还没有安装“retdec”，你可能需要先通过https://github.com/avast/retdec安装它，它不会花太长时间，而且一劳永逸
+
 然而，在你开始之前，你仍然需要在终端设置你的`OPENAI_KEY`，你可以从[这里](https://beta.openai.com/docs/developer-quickstart)获得你的密钥
 ```
 export OPENAI_API_KEY="在这里输入你的api_key"

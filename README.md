@@ -31,7 +31,10 @@ Our package have successfully uploaded to [Pypi](https://pypi.org/project/Ret2GP
 ```
 python3 -m pip --index-url=https://pypi.org/simple/ Ret2GPT
 ```
-However, before you start, you still need to set your `OPENAI_KEY` in the terminal, you can get your key from [here](https://beta.openai.com/docs/developer-quickstart)
+
+Additionally, if yu didn't install `retdec` yet, you may need to install it via https://github.com/avast/retdec first, it won't take too long, will be once and for all
+
+Before you start, you still need to set your `OPENAI_KEY` in the terminal, you can get your key from [here](https://beta.openai.com/docs/developer-quickstart)
 ```
 export OPENAI_API_KEY="Enter your api_key here"
 ```
