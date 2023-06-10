@@ -143,3 +143,6 @@ langchain_preprocess/__pycache__
 *.pyc
 .chroma/
 langchain_preprocess/prompt_builder.py
+gpt_reference.txt
+langchain_preprocess/__pycache__/prompt_builder.cpython-310.pyc
+built_in_command/__pycache__/command_line.cpython-310.pyc
