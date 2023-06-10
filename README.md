@@ -25,7 +25,23 @@ All in all, `RetwGPT` includes those feature:
 
 
 # Installation
-Currently, we have not uploaded our package to PyPI, so you need to install it manually, from our github repo :(
+## Pip
+Our package have successfully uploaded to [Pypi](https://pypi.org/project/Ret2GPT/) !!!, so you can easily install it by using `pip`:
+
+```
+python3 -m pip --index-url=https://pypi.org/simple/ Ret2GPT
+```
+However, before you start, you still need to set your `OPENAI_KEY` in the terminal, you can get your key from [here](https://beta.openai.com/docs/developer-quickstart)
+```
+export OPENAI_API_KEY="Enter your api_key here"
+```
+Then you can use it by `Ret2GPT` in the terminal:
+
+```
+Ret2GPT [FILE_PATH]
+```
+
+## Local
 First, clone our repo:
 ```
 git clone https://github.com/DDizzzy79/Ret2GPT.git

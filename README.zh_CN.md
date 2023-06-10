@@ -23,7 +23,23 @@
 * **自动化**：使用 `langchain` 和 `OpenAI` API 自动化分析二进制文件，无需人工干预
 
 # 安装
-目前，我们尚未将我们的软件包上传到 PyPI，因此您需要从我们的 github 仓库手动安装 :(
+
+## Pip
+我们的软件包已经成功上传到[Pypi](https://pypi.org/project/Ret2GPT/)！！！所以你可以通过使用`pip`轻松安装：
+
+```
+python3 -m pip --index-url=https://pypi.org/simple/ Ret2GPT
+```
+然而，在你开始之前，你仍然需要在终端设置你的`OPENAI_KEY`，你可以从[这里](https://beta.openai.com/docs/developer-quickstart)获得你的密钥
+```
+export OPENAI_API_KEY="在这里输入你的api_key"
+```
+然后你可以在终端中通过`Ret2GPT`使用它：
+
+```
+Ret2GPT [FILE_PATH]
+```
+## Local
 首先，克隆我们的仓库：
 ```
 git clone https://github.com/DDizzzy79/Ret2GPT.git

@@ -29,8 +29,9 @@ share/python-wheels/
 .installed.cfg
 *.egg
 **/*.pyc
-**/*.
+**/*.cpython
 example4
+Ret2GPT-package/
 MANIFEST
 
 # PyInstaller
