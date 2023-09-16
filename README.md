@@ -1,5 +1,7 @@
 # Ret2GPT
 
+**Ret2GPT is now available in ChatWithBinary.com!!!!!!**
+
 
 <img width="1000" alt="Xnip2023-04-16_11-36-38" src="https://user-images.githubusercontent.com/72267897/232265065-cf63b1d8-37ea-4eaa-b64e-e434eb369c16.png">
 
