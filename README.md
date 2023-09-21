@@ -2,6 +2,8 @@
 
 **Ret2GPT is now available in ChatWithBinary.com!!!!!!**
 
+<img width="1507" alt="image" src="https://github.com/retr0reg/Ret2GPT/assets/72267897/76a00844-5dc7-4e6e-9ddd-d4b35ee49754">
+
 
 <img width="1000" alt="Xnip2023-04-16_11-36-38" src="https://user-images.githubusercontent.com/72267897/232265065-cf63b1d8-37ea-4eaa-b64e-e434eb369c16.png">
 
