@@ -2,3 +2,6 @@ enrich==1.2.7
 langchain==0.0.141
 matplotlib==3.7.1
 rich==13.3.4
+
+chromadb==0.4.15
+openai==0.28.1
