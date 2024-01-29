@@ -1,6 +1,6 @@
-# Ret2GPT
+# ChatWithBinary
 
-**Ret2GPT is now available in ChatWithBinary.com!!!!!!**
+**ChatWithBinary is now available in ChatWithBinary.com!!!!!!**
 
 <img width="1507" alt="image" src="https://github.com/retr0reg/Ret2GPT/assets/72267897/76a00844-5dc7-4e6e-9ddd-d4b35ee49754">
 
@@ -10,17 +10,17 @@
 
 
 
-`RET2GPT` is a cutting-edge software tool designed to analyze binary files using the **LangChain** (OpenAI API) technology. It primarily focuses on aiding CTF (Capture The Flag) Pwners in gaining a deeper understanding of the binary files they are working with and providing valuable assistance to help them solve challenges more effectively :)
+`ChatWithBinary` is a cutting-edge software tool designed to analyze binary files using the **LangChain** (OpenAI API) technology. It primarily focuses on aiding CTF (Capture The Flag) Pwners in gaining a deeper understanding of the binary files they are working with and providing valuable assistance to help them solve challenges more effectively :)
 
 [中文文档 README 📖](README.zh_CN.md)
 
 [English README 📖](README.md)
 
-`RET2GPT`  is built upon a strong foundation of artificial intelligence and machine learning, which enables it to analyze complex binary files quickly and efficiently. By leveraging the power of `OpenAI API`, RET2GPT can offer a comprehensive and detailed analysis of binary files, making it an indispensable tool for CTF Pwners.
+`ChatWithBinary`  is built upon a strong foundation of artificial intelligence and machine learning, which enables it to analyze complex binary files quickly and efficiently. By leveraging the power of `OpenAI API`, RET2GPT can offer a comprehensive and detailed analysis of binary files, making it an indispensable tool for CTF Pwners.
 
-The primary goal of `RET2GPT` is to streamline the process of understanding binary files, thereby allowing CTF Pwners to focus on solving challenges rather than getting bogged down in the intricacies of binary analysis. The software achieves this by providing users with a thorough examination of the binary file's structure, logic, and potential vulnerabilities. This analysis assists Pwners in identifying any weak points in the code that may be exploitable by attackers.
+The primary goal of `ChatWithBinary` is to streamline the process of understanding binary files, thereby allowing CTF Pwners to focus on solving challenges rather than getting bogged down in the intricacies of binary analysis. The software achieves this by providing users with a thorough examination of the binary file's structure, logic, and potential vulnerabilities. This analysis assists Pwners in identifying any weak points in the code that may be exploitable by attackers.
 
-All in all, `RetwGPT` includes those feature:
+All in all, `ChatWithBinary` includes those feature:
 * **Easy-to-use** : No need to input any other files, **only the binary file** and you are good to go 
 * **Langchains**: Use `langchain` to split the file, save you tons of tokenizing time and lots of money 
 * **Precise Analyze** : Analyze binary file using langchain & OpenAI API, use elebrately designed prompt by me to get the best result
