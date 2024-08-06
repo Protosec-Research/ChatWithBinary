@@ -1,6 +1,6 @@
 # ChatWithBinary
 
-**ChatWithBinary is now available in ChatWithBinary.com!!!!!!**
+> **the re-maintainance for chatwithbinary.com will start on sept-1**
 
 <img width="1507" alt="image" src="https://github.com/retr0reg/Ret2GPT/assets/72267897/76a00844-5dc7-4e6e-9ddd-d4b35ee49754">
 
