@@ -8,10 +8,14 @@ from langchain.chains import RetrievalQA
 
 import os
 
-model = ChatOpenAI(model='gpt-3.5-turbo')
+model = ChatOpenAI(
+    model='gpt-3.5-turbo',
+    base_url=os.environ['OPENAI_BASE_URL']
+)
 
 
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
+OPENAI_BASE_URL = os.environ['OPENAI_BASE_URL']
 
 def build_reference_for_qa(path):
     input_files = [f'{path}.c']
