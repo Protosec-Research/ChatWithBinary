@@ -5,3 +5,4 @@ rich==13.3.4
 
 chromadb==0.4.15
 openai==0.28.1
+dataclasses-json==0.5.7
